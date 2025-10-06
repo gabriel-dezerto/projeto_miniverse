@@ -1,0 +1,18 @@
+body{
+    background-color: blueviolet;
+    margin: 0;
+}
+
+
+/*Principal do Site*/
+.div_especial_site{
+
+}
+
+.div_diferencial_site{
+    background-color: aqua;
+    border-radius: 30px;
+
+    width: 300px;
+    height: 400px;
+}
