@@ -1,0 +1,226 @@
+body {
+    background-color: #001d2b;
+    margin: 0;
+}
+
+/* HEADER */
+.line{
+    width: 100%;
+    height: 4px;
+    background-color: #00ff99;
+}
+
+.a_li_header {
+   color: aliceblue !important;          
+  text-decoration: none;     /* Tira o sublinhado */
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.a_li_header:hover {
+  color: #00ff99 !important;
+}
+
+.dropdown-item.a_li_header {
+  color: aliceblue !important;
+  background-color: transparent !important;
+}
+
+.dropdown-item.a_li_header:hover {
+  color: #00ff99 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important; /* leve destaque */
+}
+
+.dropmenu-marcas {
+    background-color: #092e2b;
+    border-radius: 15px;
+}
+
+.miniverse {
+    color: aliceblue;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/*Principal da Home*/
+.div_diferencial_site {
+    background-color: aqua;
+    border-radius: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 300px;
+    height: 400px;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.div_diferencial_site:hover{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+
+.card_lancamento {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card_lancamento:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+.card_slider{
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card_slider:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+.div_marcas {
+    background-color: aquamarine;
+    border-radius: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 150px;
+    height: 150px;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.div_marcas:hover {
+    box-shadow: 0 4px 10px rgba(2, 46, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+
+/* CARRINHO */
+
+.container-c {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.titulo-c h1 {
+    color: #ffffff;
+    font-size: 5.5vh;
+    margin-bottom: 2%;
+}
+
+.linha-c { 
+    background-color: #ffffff;    
+    height: 2.5px;
+    border: none;
+    width: 95%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.produtos-c {
+    width: 70%;
+    margin-top: 2%;
+}
+
+.produto-c {
+    color: #ffffff;
+    display: flex;
+}
+
+.produto-c h1 {
+    font-size: 4.vh;
+}
+
+
+
+.total-c {
+    background-color: #ffffff;
+    width: 27%;
+    border: solid #0000 2px;
+    border-radius: 5%;
+    margin-left: auto;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.titulo-total-c {
+    display: flex;
+}
+
+.texto-total {
+    font-size: 40px;
+}
+
+.preco-total {
+    font-size: 40px;
+    margin-left: auto;
+}
+
+
+
+.conteudo-c {
+    display: flex;
+    width: 100%;
+}
+
+.detalhesp-c {
+    margin-left: 4%;
+}
+
+.produto-c img {
+    width: 12%;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: aliceblue;
+    padding: 40px 0;
+  }
+  
+  /* Linha principal do footer */
+  footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px; /* espaço entre colunas */
+    flex-wrap: nowrap; /* mantém tudo em uma linha */
+    text-align: left;
+  }
+  
+  /* Cada coluna (ex: Marvel, DC...) */
+  footer .col {
+    min-width: 150px;
+  }
+  
+  /* Títulos das colunas */
+  footer h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #00ff99;
+  }
+  
+  footer a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: #00ff99;
+  }
+  
+  .miniF{
+      margin-bottom: 10px;
+  }

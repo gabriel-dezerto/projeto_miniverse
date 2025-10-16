@@ -1,32 +1,305 @@
-body{
+body {
     background-color: #001d2b;
     margin: 0;
 }
 
-/*Header*/
-.a_li_header{
-    color: aliceblue;
+/* HEADER */
+.line{
+    width: 100%;
+    height: 4px;
+    background-color: #00ff99;
 }
 
-/*Principal do Site*/
-.div_diferencial_site{
+.a_li_header {
+   color: aliceblue !important;          
+  text-decoration: none;     /* Tira o sublinhado */
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.a_li_header:hover {
+  color: #00ff99 !important;
+}
+
+.dropdown-item.a_li_header {
+  color: aliceblue !important;
+  background-color: transparent !important;
+}
+
+.dropdown-item.a_li_header:hover {
+  color: #00ff99 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important; /* leve destaque */
+}
+
+.dropmenu-marcas {
+    background-color: #092e2b;
+    border-radius: 15px;
+}
+
+.miniverse {
+    color: aliceblue;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/*Principal da Home*/
+.div_diferencial_site {
     background-color: aqua;
     border-radius: 30px;
 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
 
     width: 300px;
     height: 400px;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.div_marcas{
+.div_diferencial_site:hover{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+
+.card_lancamento {
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.card_lancamento img {
+  height: 280px;
+  object-fit: contain;
+  background-color: #00000033;
+  border-radius: 10px 10px 0 0;
+}
+
+.card_lancamento:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.4);
+}
+
+.card_lancamento .btn {
+  margin-top: 10px;
+}
+
+
+.card_slider {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_slider img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card_slider:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 255, 100, 0.35);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10px;
+  height: 37px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 300%; /* botão redondinho */
+  padding: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* deixa o ícone branco se o fundo for escuro */
+}
+
+
+
+.div_marcas {
     background-color: aquamarine;
     border-radius: 40px;
 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
 
     width: 150px;
     height: 150px;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.div_marcas:hover {
+    box-shadow: 0 4px 10px rgba(2, 46, 0, 0.25);
+    transform: translateY(-5px);
+}
+
+
+.button{
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover{
+  background-color: #0000;
+}
+
+.promo{
+  border-color: green;
+}
+
+/*Eventos Saxonais*/
+
+.div_diferencial_site {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.div_diferencial_site:hover {
+  transform: scale(1.05);
+}
+
+.evento-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+/* CARRINHO */
+
+.container-c {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.titulo-c h1 {
+    color: #ffffff;
+    font-size: 5.5vh;
+    margin-bottom: 2%;
+}
+
+.linha-c { 
+    background-color: #ffffff;    
+    height: 2.5px;
+    border: none;
+    width: 65%;
+}
+
+.produtos-c {
+    width: 60%;
+}
+
+.produto-c {
+    color: #ffffff;
+}
+
+.produto-c h1 {
+    font-size: 4.vh;
+}
+
+.total-c {
+    background-color: #ffffff;
+    width: 17%;
+    border: solid #0000 2px;
+    border-radius: 5%;
+}
+
+.conteudo-c {
+    display: flex;
+    width: 100%;
+}
+
+/*Footer*/
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  padding: 40px 0;
+}
+
+/* Linha principal do footer */
+footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap; /* 🔹 permite quebrar linha */
+  text-align: left;
+}
+
+/* Cada coluna (ex: Marvel, DC...) */
+footer .col {
+  min-width: 150px;
+  flex: 1 1 200px; /* 🔹 faz cada coluna se ajustar */
+  margin-bottom: 30px; /* espaço entre linhas quando quebrar */
+}
+
+/* Títulos das colunas */
+footer h5 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+footer a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00ff99;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 992px) {
+  footer .row {
+    gap: 40px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .row {
+    flex-direction: column; /* empilha as colunas */
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer .col {
+    text-align: center;
+  }
+
+  footer h5 {
+    font-size: 16px;
+  }
+}
+
+.miniF {
+  margin-bottom: 10px;
+}
+
