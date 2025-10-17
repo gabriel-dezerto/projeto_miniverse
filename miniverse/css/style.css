@@ -1,18 +1,20 @@
 body {
-    background-color: #001d2b;
-    margin: 0;
+  background-color: #001d2b;
+  margin: 0;
 }
 
 /* HEADER */
-.line{
-    width: 100%;
-    height: 4px;
-    background-color: #00ff99;
+.line {
+  width: 100%;
+  height: 4px;
+  background: #005A7F;
+  background: linear-gradient(79deg, rgba(0, 90, 127, 1) 0%, rgba(23, 146, 123, 1) 45%, rgba(44, 197, 120, 1) 100%);
 }
 
 .a_li_header {
-   color: aliceblue !important;          
-  text-decoration: none;     /* Tira o sublinhado */
+  color: aliceblue !important;
+  text-decoration: none;
+  /* Tira o sublinhado */
   margin-right: 15px;
   transition: color 0.3s;
 }
@@ -28,38 +30,46 @@ body {
 
 .dropdown-item.a_li_header:hover {
   color: #00ff99 !important;
-  background-color: rgba(255, 255, 255, 0.1) !important; /* leve destaque */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  /* leve destaque */
 }
 
 .dropmenu-marcas {
-    background-color: #092e2b;
-    border-radius: 15px;
+  background-color: #092e2b;
+  border-radius: 15px;
 }
 
 .miniverse {
-    color: aliceblue;
-    font-size: 22px;
-    margin-bottom: 5px;
+  color: aliceblue;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+/*perfil*/
+
+.test:focus {
+  border-color: #00ff99 !important;
+  box-shadow: #00ff99 !important;
 }
 
 /*Principal da Home*/
 .div_diferencial_site {
-    background-color: aqua;
-    border-radius: 30px;
+  background-color: aqua;
+  border-radius: 30px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
 
-    width: 300px;
-    height: 400px;
+  width: 300px;
+  height: 400px;
 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.div_diferencial_site:hover{
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    transform: translateY(-5px);
+.div_diferencial_site:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
 }
 
 
@@ -105,57 +115,72 @@ body {
   box-shadow: 0 8px 25px rgba(0, 255, 100, 0.35);
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+/*Controles do slider de imagens*/
+.prev_button_img,
+.next_button_img {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000;
+  border-radius: 300%;
+}
+
+/*Controles do slider de cards*/
+.prev_button,
+.next_button {
   width: 10px;
   height: 37px;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 300%; /* botão redondinho */
+  border-radius: 300%;
+  /* botão redondinho */
   padding: 10px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.prev_button-icon,
+.next_button-icon {
   width: 30px;
   height: 30px;
-  filter: invert(1); /* deixa o ícone branco se o fundo for escuro */
+  filter: invert(1);
+  /* deixa o ícone branco se o fundo for escuro */
 }
 
+/**/
 
 
 .div_marcas {
-    background-color: aquamarine;
-    border-radius: 40px;
+  background-color: aquamarine;
+  border-radius: 40px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
 
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .div_marcas:hover {
-    box-shadow: 0 4px 10px rgba(2, 46, 0, 0.25);
-    transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(2, 46, 0, 0.25);
+  transform: translateY(-5px);
 }
 
 
-.button{
+.button {
   background-color: green;
   color: white;
   transition: background-color 0.3s ease;
 }
 
-.button:hover{
+.button:hover {
   background-color: #0000;
 }
 
-.promo{
+.promo {
   border-color: green;
 }
 
@@ -185,46 +210,46 @@ body {
 /* CARRINHO */
 
 .container-c {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
 }
 
 .titulo-c h1 {
-    color: #ffffff;
-    font-size: 5.5vh;
-    margin-bottom: 2%;
+  color: #ffffff;
+  font-size: 5.5vh;
+  margin-bottom: 2%;
 }
 
-.linha-c { 
-    background-color: #ffffff;    
-    height: 2.5px;
-    border: none;
-    width: 65%;
+.linha-c {
+  background-color: #ffffff;
+  height: 2.5px;
+  border: none;
+  width: 65%;
 }
 
 .produtos-c {
-    width: 60%;
+  width: 60%;
 }
 
 .produto-c {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .produto-c h1 {
-    font-size: 4.vh;
+  font-size: 4.vh;
 }
 
 .total-c {
-    background-color: #ffffff;
-    width: 17%;
-    border: solid #0000 2px;
-    border-radius: 5%;
+  background-color: #ffffff;
+  width: 17%;
+  border: solid #0000 2px;
+  border-radius: 5%;
 }
 
 .conteudo-c {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 /*Footer*/
@@ -241,15 +266,18 @@ footer .row {
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
-  flex-wrap: wrap; /* 🔹 permite quebrar linha */
+  flex-wrap: wrap;
+  /* 🔹 permite quebrar linha */
   text-align: left;
 }
 
 /* Cada coluna (ex: Marvel, DC...) */
 footer .col {
   min-width: 150px;
-  flex: 1 1 200px; /* 🔹 faz cada coluna se ajustar */
-  margin-bottom: 30px; /* espaço entre linhas quando quebrar */
+  flex: 1 1 200px;
+  /* 🔹 faz cada coluna se ajustar */
+  margin-bottom: 30px;
+  /* espaço entre linhas quando quebrar */
 }
 
 /* Títulos das colunas */
@@ -285,7 +313,8 @@ footer a:hover {
   }
 
   footer .row {
-    flex-direction: column; /* empilha as colunas */
+    flex-direction: column;
+    /* empilha as colunas */
     align-items: center;
     gap: 20px;
   }
@@ -302,4 +331,3 @@ footer a:hover {
 .miniF {
   margin-bottom: 10px;
 }
-
