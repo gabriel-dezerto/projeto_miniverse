@@ -13,7 +13,7 @@
 
 <body>
 
-    <header style="font-size: 20px; background-color: #092e2b;">
+    <header style="font-size: 20px; background-color: #092e2b;" id="inicio">
         <div class="line"></div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -39,16 +39,12 @@
                                     Marcas
                                 </a>
                                 <ul class="dropdown-menu dropmenu-marcas">
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#marvel">Marvel</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#dc">DC</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#dragonball">Dragon
-                                            Ball</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#tlou">The Last of
-                                            Us</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#starwars">Star Wars</a>
-                                    </li>
-                                    <li><a class="dropdown-item a_li_header" href="produtos.html#seresmito">Seres
-                                            Mitológicos</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="marvel">Marvel</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="dc">DC</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="dragonBall">Dragon Ball</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="tlou">The Last of Us</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="starWars">Star Wars</a> </li>
+                                    <li><a class="dropdown-item a_li_header" href="produtos.html" data-marca="seresMito">Seres Mitológicos</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -67,72 +63,80 @@
         style="margin-top: 10%;">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="border-bottom: none;">
+                <div class="modal-header" style="border-bottom: none; margin-top: 2%;">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        style="margin-left: 0;"></button>
-                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="margin-right: auto; margin-left: auto;">
+                        style="margin-left: 0; box-shadow: none;"></button>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"
+                        style="position: absolute; left: 50%; transform: translateX(-50%); font-size: 4vh !important; margin-top: 10%;">
                         Login</h1>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="margin-top: 2%;">
                     <form>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">E-mail</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <label for="recipient-name" class="col-form-label">E-mail</label> 
+                            <input type="text" class="form-control test" id="recipient-name" style="box-shadow: none;">
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Senha</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" style="box-shadow: none;">
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer" style="border-top: none;">
+                <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%;">
                     <button type="button" class="btn btn-primary"
-                        style="margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black;">Entrar</button>
+                        style="margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 40%; border-radius: 60px; font-size: 2.5vh;">Entrar</button>
                 </div>
+                <div style="margin-left: auto; margin-right: auto; margin-top: 1%; margin-bottom: 3%;">
+                    <p>Não tem uma conta? <a href="criarconta.html" style="text-decoration: none; color: #1cbe7e;"><b>Crie uma</b></a></p> 
+                </div><b>
             </div>
         </div>
     </div>
+
 
     <div class="container" style="margin-top: 50px;">
         <div class="row">
             <div class="col">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hove">
                     <div class="carousel-inner">
-                        <div class="carousel-item active"> <a href="./produtos.html#tlou"><img
-                                    src="../images/img_slider/tlou_slider.png" class="d-block w-100"></a> </div>
-                        <div class="carousel-item"> <a href="./produtos.html#seresmito"><img
-                                    src="../images/img_slider/seresMito_slider.png" class="d-block w-100"></a> </div>
-                        <div class="carousel-item"> <a href="./produtos.html#dc"><img
-                                    src="../images/img_slider/dc_slider.png" class="d-block w-100"></a> </div>
-                        <div class="carousel-item"> <a href="./produtos.html#marvel"><img
-                                    src="../images/img_slider/marvel_slider.png" class="d-block w-100"></a> </div>
-                        <div class="carousel-item"> <a href="./produtos.html#starwars"><img
-                                    src="../images/img_slider/starWars_slider.png" class="d-block w-100"></a> </div>
-                        <div class="carousel-item"> <a href="./produtos.html#dragonball"><img
-                                    src="../images/img_slider/dragonBall_slider.png" class="d-block w-100"></a> </div>
-                    </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-                            class="visually-hidden">Previous</span> </button> <button class="carousel-control-next"
-                        type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next"> <span
-                            class="carousel-control-next-icon" aria-hidden="true"></span> <span
-                            class="visually-hidden">Next</span> </button>
+                        <div class="carousel-item active">
+                            <a href="./produtos.html#tlou">
+                                <img src="../images/img_slider/tlou_slider.png" class="d-block w-100"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./produtos.html#seresmito">
+                                <img src="../images/img_slider/seresMito_slider.png" class="d-block w-100"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./produtos.html#dc">
+                                <img src="../images/img_slider/dc_slider.png" class="d-block w-100"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./produtos.html#marvel">
+                                <img src="../images/img_slider/marvel_slider.png" class="d-block w-100"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./produtos.html#starwars">
+                                <img src="../images/img_slider/starWars_slider.png" class="d-block w-100"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./produtos.html#dragonball">
+                                <img src="../images/img_slider/dragonBall_slider.png" class="d-block w-100"></a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev prev_button_img" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next next_button_img" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert();"></span>
-        <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert();"></span>
-        <span class="visually-hidden">Próximo</span>
-    </button>
-    </div>
-    </div>
-    </div>
     </div>
 
     <div class="container" style="margin-top: 80px;">
@@ -140,24 +144,24 @@
             <!-- Evento 1 -->
             <div class="col divs_funcoes_site">
                 <div class="div_diferencial_site">
-                    <img src="img" alt="Mês das Crianças" class="evento-img">
-                    <h2>Mês das Crianças</h2>
+                    <img src="../images/evento_sazonal/pennywise_halloween.png" alt="Evento Sazonal" class="evento-img">
+                    <h2>Halloween</h2>
                 </div>
             </div>
 
             <!-- Evento 2 -->
             <div class="col divs_funcoes_site">
                 <div class="div_diferencial_site">
-                    <img src="img" alt="Natal" class="evento-img">
-                    <h2>Halloween</h2>
+                    <img src="img" alt="Planos de assinatura" class="evento-img">
+                    <h2>Planos</h2>
                 </div>
             </div>
 
             <!-- Evento 3 -->
             <div class="col divs_funcoes_site">
                 <div class="div_diferencial_site">
-                    <img src="img" alt="Halloween" class="evento-img">
-                    <h2>Natal</h2>
+                    <img src="img" alt="Personalização de Miniatura" class="evento-img">
+                    <h2>Personalizar miniatura</h2>
                 </div>
             </div>
         </div>
@@ -176,7 +180,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Homem de Ferro</h5>
                         <p class="card-text">Texto embaixo</p>
-                        <a href="#" class="btn btn-outline-success button">Ver miniatura</a>
+                        <a href="./marvel/homemFerro.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +191,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Joel</h5>
                         <p class="card-text">Texto embaixo</p>
-                        <a href="#" class="btn btn-outline-success button">Ver miniatura</a>
+                        <a href="./tlou/joel.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
             </div>
@@ -198,7 +202,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Piccolo</h5>
                         <p class="card-text">Texto embaixo</p>
-                        <a href="#" class="btn btn-outline-success button">Ver miniatura</a>
+                        <a href="./dragonBall/piccolo.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
             </div>
@@ -209,7 +213,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Yoda</h5>
                         <p class="card-text">Texto embaixo</p>
-                        <a href="#" class="btn btn-outline-success button">Ver miniatura</a>
+                        <a href="./starWars/yoda.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
             </div>
@@ -303,11 +307,13 @@
             </div>
 
             <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev prev_button" type="button" data-bs-target="#cardCarousel"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+            <button class="carousel-control-next next_button" type="button" data-bs-target="#cardCarousel"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
@@ -370,7 +376,7 @@
         <div class="container py-4 py-md-5 px-4 px-md-3">
             <div class="row">
                 <div class="col-lg-3 mb-3"> <a class="d-inline-flex align-items-center mb-2 text-decoration-none"
-                        href="index.html" aria-label="Bootstrap"> <img src="../images/logo_miniverse_minimalista.png"
+                        href="#inicio" aria-label="Bootstrap"> <img src="../images/logo_miniverse_minimalista.png"
                             height="80" width="80">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
@@ -387,9 +393,9 @@
                 <div class="col-6 col-lg-1 mb-2">
                     <h5 class="marvel">Marvel</h5><br>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="./html/marvel/homemAranha.html">Homem-Aranha</a></li>
-                        <li class="mb-2"><a href="./html/marvel/homemFerro.html">Homem de Ferro</a></li>
-                        <li class="mb-2"><a href="./html/marvel/capitaoAmerica.html">Capitão América</a></li>
+                        <li class="mb-2"><a href="./marvel/homemAranha.html">Homem-Aranha</a></li>
+                        <li class="mb-2"><a href="./marvel/homemFerro.html">Homem de Ferro</a></li>
+                        <li class="mb-2"><a href="./marvel/capitaoAmerica.html">Capitão América</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-1 mb-2">
