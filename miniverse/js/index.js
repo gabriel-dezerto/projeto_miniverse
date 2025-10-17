@@ -1,20 +1,3 @@
-//Script para dar destaque à marca clicada no header na página de produtos
-document.addEventListener("DOMContentLoaded", () => {
-    const hash = window.location.hash;
-
-    if (hash) {
-        const section = document.querySelector(hash);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" }); //Define como será a rolagem até a seção correta
-            section.classList.add("destaque");
-
-            setTimeout(() => {
-                section.classList.remove("destaque");
-            }, 3000);
-        }
-    }
-});
-
 const exampleModal = document.getElementById('exampleModal')
 if (exampleModal) {
   exampleModal.addEventListener('show.bs.modal', event => {
@@ -33,3 +16,34 @@ if (exampleModal) {
     modalBodyInput.value = recipient
   })
 }
+//-----------------------------------------------------------------------------------------------------------------------------------
+//Para a página de produtos abrir de acordo com a marca
+
+document.querySelectorAll('.dropdown-item').forEach(item =>{
+  item.addEventListener('click', (eve) =>{
+    eve.preventDefault();
+
+    //pega a marca pelo atributo "data-marca"
+    const marca = item.getAttribute('data-marca');
+    
+    //bloqueia as outras seções enquanto uma estiver aberta
+    document.querySelectorAll('.marca-section').forEach(sec => sec.classList.add('d-none'));
+
+    //mostra a marca escolhida
+    document.getElementById(marca).classList.remove('d-none');
+
+    window.addEventListener('DOMContentLoaded', () =>{
+      const hash = window.location.hash.replace('#', '');
+
+      if(hash){
+        document.querySelectorAll('.marca-section').forEach(sec => sec.classList.add('d-none'));
+        const secao = document.getElementById(hash);
+        if(secao){
+          secao.classList.remove('d-none');
+        }
+      }
+    })
+  })
+})
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
