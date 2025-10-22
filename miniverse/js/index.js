@@ -17,33 +17,33 @@ if (exampleModal) {
   })
 }
 //-----------------------------------------------------------------------------------------------------------------------------------
-//Para a página de produtos abrir de acordo com a marca
+//Para dar destaque na marca selecionada na página de produtos
+document.addEventListener("DOMContentLoaded", () =>{
+  const hash = window.location.hash;
 
-document.querySelectorAll('.dropdown-item').forEach(item =>{
-  item.addEventListener('click', (eve) =>{
-    eve.preventDefault();
+  if(hash){
+    const section = document.querySelector(hash);
+    if(section){
+      const cores = {
+        marvel: "rgba(255, 0, 0, 0.8)",
+        dc: "rgba(0, 0, 255, 0.8)",
+        dragonball: "rgba(255, 140, 0, 0.8)",
+        tlou: "rgba(128, 64, 0, 0.8)",
+        starwars: "rgba(255, 215, 0, 0.8)",
+        seresmito: "rgba(138, 43, 226, 0.8)"
+      };
 
-    //pega a marca pelo atributo "data-marca"
-    const marca = item.getAttribute('data-marca');
-    
-    //bloqueia as outras seções enquanto uma estiver aberta
-    document.querySelectorAll('.marca-section').forEach(sec => sec.classList.add('d-none'));
+      const marca = hash.replace("#", "");
+      const cor = cores[marca] || "rgba(23, 146, 123, 1)";
 
-    //mostra a marca escolhida
-    document.getElementById(marca).classList.remove('d-none');
+      section.style.boxShadow = `0 0 20px 5px ${cor}`;
+      section.classList.add("destaque");
 
-    window.addEventListener('DOMContentLoaded', () =>{
-      const hash = window.location.hash.replace('#', '');
+      section.scrollIntoView({behavior: "smooth"});
 
-      if(hash){
-        document.querySelectorAll('.marca-section').forEach(sec => sec.classList.add('d-none'));
-        const secao = document.getElementById(hash);
-        if(secao){
-          secao.classList.remove('d-none');
-        }
-      }
-    })
-  })
-})
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
+      setTimeout(()=>{
+        section.classList.remove("destaque");
+      }, 3000);
+    }
+  }
+});
