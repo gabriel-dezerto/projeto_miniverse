@@ -96,6 +96,9 @@ body {
   margin-top: 10px;
 }
 
+.slider_cards{
+  padding: 15px;
+}
 
 .card_slider {
   background-color: #1e1e1e;
@@ -113,6 +116,11 @@ body {
 .card_slider:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0, 255, 100, 0.35);
+}
+
+.text_desconto{
+  font-size: 10px;
+  color: #747474;
 }
 
 /*Controles do slider de imagens*/
@@ -252,6 +260,55 @@ body {
   width: 100%;
 }
 
+/*Evento sazonal*/
+@font-face {
+  font-family: 'Shlop';
+  src: url(../css/fonts/shlop.otf) format('truetype');
+}
+
+.titulo-halloween{
+  font-family: 'Shlop', sans-serif;
+  color: orange;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 10px #ff6600;
+}
+
+.card_halloween {
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card_halloween img {
+  height: 400px;
+  object-fit: contain;
+  background-color: #00000033;
+  border-radius: 10px 10px 0 0;
+}
+
+.card_halloween:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px orange;
+}
+
+.card_halloween .button_halloween {
+  margin-top: 10px;
+}
+
+.button_halloween {
+  background-color: orange;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.button_halloween:hover {
+  background-color: #0000;
+}
+
 /*Footer*/
 
 footer {
@@ -331,3 +388,5 @@ footer a:hover {
 .miniF {
   margin-bottom: 10px;
 }
+
+
