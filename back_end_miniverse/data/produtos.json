@@ -1,5 +1,23 @@
 [
-    {"id": 1, "marca": "Marvel", "nome": "Homem-Aranha"},
-    {"id": 2, "marca": "Marvel", "nome": "Homem de Ferro"},
-    {"id": 3, "marca": "Marvel", "nome": "Capitão América"}
+    {"id": 1001, "marca": "Marvel", "nome": "Homem-Aranha"},
+    {"id": 1002, "marca": "Marvel", "nome": "Homem de Ferro"},
+    {"id": 1003, "marca": "Marvel", "nome": "Capitão América"},
+    {"id": 2001, "marca": "DC", "nome": "Batman"},
+    {"id": 2002, "marca": "DC", "nome": "Superman"},
+    {"id": 2003, "marca": "DC", "nome": "Mulher-Maravilha"},
+    {"id": 3001, "marca": "Dragon Ball", "nome": "Goku"},
+    {"id": 3002, "marca": "Dragon Ball", "nome": "Vegeta"},
+    {"id": 3003, "marca": "Dragon Ball", "nome": "Piccolo"},
+    {"id": 4001, "marca": "The Last of Us", "nome": "Joel"},
+    {"id": 4002, "marca": "The Last of Us", "nome": "Ellie"},
+    {"id": 4003, "marca": "The Last of Us", "nome": "Abby"},
+    {"id": 5001, "marca": "Star Wars", "nome": "Darth Vader"},
+    {"id": 5002, "marca": "Star Wars", "nome": "Yoda"},
+    {"id": 5003, "marca": "Star Wars", "nome": "Leia"},
+    {"id": 6001, "marca": "Seres Mitológicos", "nome": "Zeus"},
+    {"id": 6002, "marca": "Seres Mitológicos", "nome": "Minotauro"},
+    {"id": 6003, "marca": "Seres Mitológicos", "nome": "Medusa"},
+    {"id": 1101, "marca": "Halloween", "nome": "Jason"},
+    {"id": 1102, "marca": "Halloween", "nome": "Ghostface"},
+    {"id": 1103, "marca": "Halloween", "nome": "Pennywise"}
 ]
