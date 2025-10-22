@@ -22,61 +22,61 @@
 
 <body>
 
-  <header style="font-size: 20px; background-color: #092e2b;">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a href="../index.html"><img src="../../images/logo_miniverse_minimalista.png" style="width: 55px;"></a>
-        <div class="logo">
-          <p style="color: aliceblue;">MINIVERSE</p>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div style="margin-left: auto; margin-right: auto;  ">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-              <li class="nav-item">
-                <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link a_li_header" style="color: aliceblue;" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle a_li_header" style="color: aliceblue;" href="#" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Marcas
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#marvel">Marvel</a></li>
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#dc">DC</a></li>
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#dragonball">Dragon Ball</a></li>
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#tlou">The Last of Us</a></li>
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#starwars">Star Wars</a></li>
-                  <li><a class="dropdown-item a_li_header" href="produtos.html#seresmito">Seres Mitológicos</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <a href="conta.html"><img src="../../images/icon_conta.svg" class="d-flex"
-              style="width: 50px; margin-right: 20px; filter: invert();"></a>
-          <a href="carrinho.html"><img src="../../images/icon_carrinho.svg" class="d-flex"
-              style="width: 40px; filter: invert();"></a>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <header style="font-size: 20px; background-color: #092e2b;" id="inicio">
+        <div class="line"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../../images/logo_miniverse_minimalista.png" style="width: 55px;"></a>
+                <p class="miniverse">MINIVERSE</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div style="margin-left: auto; margin-right: auto;  ">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link a_li_header" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a_li_header" href="../produtos.html">Produtos</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle a_li_header" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Marcas
+                                </a>
+                                <ul class="dropdown-menu dropmenu-marcas">
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#marvel" >Marvel</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#dc">DC</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#dragonball" >Dragon Ball</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#tlou">The Last of Us</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#starwars" >Star Wars</a> </li>
+                                    <li><a class="dropdown-item a_li_header" href="../produtos.html#seresmito">Seres Mitológicos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="carrinho.html"><img src="../../images/icon_carrinho.svg" class="d-flex"
+                            style="width: 30px; margin-right: 20px;  filter: invert();"></a>
+                    <a href="conta.html" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="../../images/icon_conta.svg" class="d-flex" style="width: 30px; filter: invert();"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
   <div class="quadrado">
     <div class="rota">Início > Marca > Marvel > Homem de Ferro</div>
 
     <div class="produto">
       <div class="galeria">
-        <img src="https://via.placeholder.com/600x400?text=Imagem+do+Produto" alt="Homem-de-Ferro">
+        <img src="../../images/produtos_marvel/HomemDeFerro.png" alt="Homem-de-Ferro">
       </div>
       <div class="informacoes">
         <h1>Homem de Ferro</h1>
-        <p>Código: Qdiadiadia</p>
+        <p>Código: MRV-001-IF</p>
 
         <div class="pix">R$ 1.839,95 no Pix</div>
         <div class="preco-antigo">De R$ 1.999,95</div>
@@ -94,29 +94,77 @@
           <br>
           <button class="botao-comprar">Comprar</button>
         </div>
-
-        <div class="frete">
-          <label for="cep">Calcule o frete:</label><br>
-          <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9" inputmode="numeric" autocomplete="postal-code" aria-describedby="cep-feedback">
-          <button id="calcular-cep" type="button" class="btn btn-outline-success button">Calcular</button>
-          <div id="cep-feedback" role="alert" aria-live="polite" class="cep-feedback"></div>
-        </div>
       </div>
     </div>
 
     <div class="descricao">
       <h2>Descrição do Produto</h2>
       <p>
-        Miniatura do Homem de Ferro, Feita por uma impresora 3D, com detalhes feitos a mão.. .. . .bla albla blablabla
+        <strong>Traga o poder da Stark Industries para sua coleção!</strong> Esta miniatura exclusiva do Homem de Ferro
+        (Mark VII) é uma réplica impressionante do icônico traje do gênio bilionário Tony Stark. Produzida com
+        tecnologia
+        de impressão 3D de última geração, cada peça passa por rigoroso controle de qualidade.
       </p>
+      <p>
+        O processo de fabricação combina precisão tecnológica com arte tradicional. Após a impressão em camadas
+        ultrafinas (resolução de 0.1mm), cada miniatura recebe tratamento térmico para maior resistência, seguido
+        de lixamento manual em 3 etapas diferentes. A pintura é aplicada à mão por artistas especializados,
+        utilizando tintas acrílicas de alta cobertura com proteção UV, garantindo cores vibrantes que não desbotam.
+      </p>
+      <p>
+        <strong>Detalhes Imperdíveis:</strong> O traje apresenta o clássico padrão vermelho e dourado, com acabamento
+        metálico realista. O reator arc no peito possui textura diferenciada com efeito luminescente (brilha no
+        escuro!).
+        Cada articulação, painel e linha do traje foi fielmente reproduzida, desde os propulsores das botas até os
+        estabilizadores das mãos. A pose dinâmica captura o herói pronto para o combate, com uma das mãos preparada
+        para disparar o repulsor.
+      </p>
+      <h3>Especificações Técnicas</h3>
+      <ul class="especificacoes">
+        <li><strong>Material:</strong> PLA+ premium importado (biodegradável e livre de toxinas)</li>
+        <li><strong>Dimensões:</strong> 15cm (altura) x 9cm (largura) x 7cm (profundidade)</li>
+        <li><strong>Peso:</strong> 200g (base robusta garante estabilidade)</li>
+        <li><strong>Acabamento:</strong> Pintura artesanal com 7 camadas + verniz protetor mate</li>
+        <li><strong>Base:</strong> Inclusa - hexagonal preta com logo da Stark Industries em alto relevo</li>
+        <li><strong>Resolução de impressão:</strong> 0.1mm (ultra detalhada)</li>
+        <li><strong>Temperatura de resistência:</strong> Até 60°C</li>
+        <li><strong>Tempo de produção:</strong> 3-5 dias úteis (cada peça é feita sob encomenda)</li>
+        <li><strong>Garantia:</strong> 90 dias contra defeitos de fabricação</li>
+        <li><strong>Certificação:</strong> Produto artesanal registrado</li>
+      </ul>
+
+      <h3>Cuidados e Conservação</h3>
+      <ul class="especificacoes">
+        <li><strong>Limpeza:</strong> Use pano macio e seco. Evite produtos químicos</li>
+        <li><strong>Exposição:</strong> Mantenha longe de luz solar direta prolongada</li>
+        <li><strong>Armazenamento:</strong> Local seco, temperatura ambiente (15-25°C)</li>
+        <li><strong>Manuseio:</strong> Segure sempre pela base para evitar quebra de detalhes</li>
+      </ul>
+
+      <h3>Por que escolher Miniverse?</h3>
+      <p class="pq_escolher">
+        ✓ <strong>Qualidade Premium:</strong> Não trabalhamos com produtos em massa. Cada miniatura é única<br>
+        ✓ <strong>Sustentabilidade:</strong> Material PLA biodegradável e processo de produção consciente<br>
+        ✓ <strong>Artesanato Local:</strong> Apoie artistas brasileiros e produção nacional<br>
+        ✓ <strong>Embalagem Especial:</strong> Caixa colecionável com espuma protetora<br>
+        ✓ <strong>Certificado de Autenticidade:</strong> Cada peça vem numerada e assinada pelo artista<br>
+        ✓ <strong>Envio Seguro:</strong> Embalagem reforçada com rastreamento completo
+      </p>
+
+      <div class="acompanha">
+        <p>
+          <strong>📦 O que acompanha:</strong> Miniatura Homem de Ferro pintada à mão, 
+          base hexagonal com logo Stark Industries, certificado de autenticidade numerado, manual de cuidados 
+          e embalagem colecionável premium.
+        </p>
+      </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
 
-  <footer>
     <footer class="bd-footer py-4 py-md-5" style="margin-top: 200px;">
       <div class="container py-4 py-md-5 px-4 px-md-3">
         <div class="row">
@@ -188,15 +236,14 @@
       </div>
       <button>slpa</button>
     </footer>
-  </footer>
 
-  <script>
-    $('.select_quantidade').select2({
-      minimumResultsForSearch: Infinity, // remove a barra de pesquisa
-      placeholder: "Selecione a quantidade",
-      allowClear: false
-    });
-  </script>
+    <script>
+      $('.select_quantidade').select2({
+        minimumResultsForSearch: Infinity, // remove a barra de pesquisa
+        placeholder: "Selecione a quantidade",
+        allowClear: false
+      });
+    </script>
 
 </body>
 
