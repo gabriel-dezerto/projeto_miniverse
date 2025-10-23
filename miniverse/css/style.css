@@ -1,8 +1,18 @@
 body {
   background-color: #001d2b;
   margin: 0;
+
+  font-family: 'Ruda', sans-serif;
 }
 
+@font-face {
+  font-family: 'Shlop';
+  src: url(../css/fonts/shlop.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Ruda';
+  src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
+}
 /* HEADER */
 .line {
   width: 100%;
@@ -53,23 +63,121 @@ body {
 }
 
 /*Principal da Home*/
+
 .div_diferencial_site {
-  background-color: aqua;
   border-radius: 30px;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-
+  margin: 0 auto 25px;
   width: 300px;
   height: 400px;
-
+  text-align: center;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .div_diferencial_site:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
+}
+
+.evento-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 80, 4, 0.3);
+  z-index: 1;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.texto-sobre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.div_diferencial_site:hover .overlay {
+  background: rgba(33, 141, 0, 0.3);
+}
+
+.div_diferencial_site:hover .texto-sobre {
+  transform: translate(-50%, -50%) scale(1.05);
+  opacity: 1;
+}
+
+
+/*Versão Halloween*/
+.div_diferencial_site_halloween {
+  border-radius: 30px;
+  margin: 0 auto 25px;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.div_diferencial_site_halloween:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px) scale(1.05);
+}
+
+.evento-img_halloween {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+.overlay_halloween {
+  position: absolute;
+  inset: 0;
+  background: rgba(141, 78, 0, 0.3);
+  z-index: 1;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.texto-sobre_halloween {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.div_diferencial_site_halloween:hover .overlay_halloween {
+  background: rgba(131, 72, 0, 0.5);
+}
+
+.div_diferencial_site_halloween:hover .texto-sobre_halloween {
+  transform: translate(-50%, -50%) scale(1.05);
+  opacity: 1;
 }
 
 
@@ -120,7 +228,7 @@ body {
 
 .text_desconto{
   font-size: 10px;
-  color: #747474;
+  color: #51A658;
 }
 
 /*Controles do slider de imagens*/
@@ -192,26 +300,9 @@ body {
   border-color: green;
 }
 
-/*Eventos Saxonais*/
+/*Eventos Sazonais*/
 
-.div_diferencial_site {
-  text-align: center;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
 
-.div_diferencial_site:hover {
-  transform: scale(1.05);
-}
-
-.evento-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
 
 
 
@@ -261,11 +352,6 @@ body {
 }
 
 /*Evento sazonal*/
-@font-face {
-  font-family: 'Shlop';
-  src: url(../css/fonts/shlop.otf) format('truetype');
-}
-
 .titulo-halloween{
   font-family: 'Shlop', sans-serif;
   color: orange;
@@ -303,10 +389,20 @@ body {
   background-color: orange;
   color: black;
   transition: background-color 0.3s ease;
+  border-color: orange;
 }
 
 .button_halloween:hover {
   background-color: #0000;
+  border-color: orange;
+}
+
+.img_footer_halloween{
+  filter: hue-rotate(230deg);
+}
+
+.a_footer_halloween:hover{
+  color: orange;
 }
 
 /*Footer*/

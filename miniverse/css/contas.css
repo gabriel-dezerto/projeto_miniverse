@@ -1,8 +1,13 @@
 body {
     background-color: #001d2b;
     margin: 0;
+    font-family: 'Ruda', sans-serif;
 }
 
+@font-face {
+    font-family: 'Ruda';
+    src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
+  }
 /* HEADER */
 .line {
     width: 100%;
@@ -52,205 +57,7 @@ body {
     box-shadow: #00ff99 !important;
 }
 
-/*Principal da Home*/
-.div_diferencial_site {
-    background-color: aqua;
-    border-radius: 30px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-
-    width: 300px;
-    height: 400px;
-
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.div_diferencial_site:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    transform: translateY(-5px);
-}
-
-
-.card_lancamento {
-    background-color: #1e1e1e;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-}
-
-.card_lancamento img {
-    height: 280px;
-    object-fit: contain;
-    background-color: #00000033;
-    border-radius: 10px 10px 0 0;
-}
-
-.card_lancamento:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.4);
-}
-
-.card_lancamento .btn {
-    margin-top: 10px;
-}
-
-
-.card_slider {
-    background-color: #1e1e1e;
-    color: #fff;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card_slider img {
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-}
-
-.card_slider:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(0, 255, 100, 0.35);
-}
-
-/*Controles do slider de imagens*/
-.prev_button_img,
-.next_button_img {
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #000000;
-    border-radius: 300%;
-}
-
-/*Controles do slider de cards*/
-.prev_button,
-.next_button {
-    width: 10px;
-    height: 37px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 300%;
-    /* botão redondinho */
-    padding: 10px;
-}
-
-.prev_button-icon,
-.next_button-icon {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-    /* deixa o ícone branco se o fundo for escuro */
-}
-
-/**/
-
-
-.div_marcas {
-    background-color: aquamarine;
-    border-radius: 40px;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-
-    width: 150px;
-    height: 150px;
-
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.div_marcas:hover {
-    box-shadow: 0 4px 10px rgba(2, 46, 0, 0.25);
-    transform: translateY(-5px);
-}
-
-
-.button {
-    background-color: green;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0000;
-}
-
-.promo {
-    border-color: green;
-}
-
-/*Eventos Saxonais*/
-
-.div_diferencial_site {
-    text-align: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.div_diferencial_site:hover {
-    transform: scale(1.05);
-}
-
-.evento-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-
-
-/* CARRINHO */
-
-.container-c {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-}
-
-.titulo-c h1 {
-    color: #ffffff;
-    font-size: 5.5vh;
-    margin-bottom: 2%;
-}
-
-.linha-c {
-    background-color: #ffffff;
-    height: 2.5px;
-    border: none;
-    width: 65%;
-}
-
-.produtos-c {
-    width: 60%;
-}
-
-.produto-c {
-    color: #ffffff;
-}
-
-.produto-c h1 {
-    font-size: 4.vh;
-}
-
-.total-c {
-    background-color: #ffffff;
-    width: 17%;
-    border: solid #0000 2px;
-    border-radius: 5%;
-}
-
-.conteudo-c {
-    display: flex;
-    width: 100%;
-}
 
 /*Footer*/
 

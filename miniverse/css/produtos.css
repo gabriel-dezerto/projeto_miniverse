@@ -1,8 +1,13 @@
 body {
-    background-color: #001d2b;
-    margin: 0;
+  background-color: #001d2b;
+  margin: 0;
+  font-family: 'Ruda', sans-serif;
 }
 
+@font-face {
+  font-family: 'Ruda';
+  src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
+}
 /* HEADER */
 .line {
   width: 100%;
