@@ -151,7 +151,7 @@ body {
 .overlay_halloween {
   position: absolute;
   inset: 0;
-  background: rgba(141, 78, 0, 0.3);
+  background: rgba(20, 11, 1, 0.3);
   z-index: 1;
   border-radius: 30px;
   transition: background 0.3s ease;
@@ -172,7 +172,7 @@ body {
 }
 
 .div_diferencial_site_halloween:hover .overlay_halloween {
-  background: rgba(131, 72, 0, 0.5);
+  background: rgba(141, 78, 0, 0.3);
 }
 
 .div_diferencial_site_halloween:hover .texto-sobre_halloween {
@@ -300,7 +300,6 @@ body {
   border-color: green;
 }
 
-/*Eventos Sazonais*/
 
 
 

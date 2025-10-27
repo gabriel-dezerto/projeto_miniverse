@@ -116,6 +116,15 @@ body {
 .badge-dc{
   background-color: #2980b9;
 }
+.badge-mito{
+  background-color: rgb(106, 176, 255);
+}
+.badge-Star{
+  background-color: rgb(255, 187, 0);
+}
+.badge-vilao{
+  background-color: rgb(92, 39, 92);
+}
 
 
 .galeria {
