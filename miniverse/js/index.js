@@ -41,9 +41,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 
       section.scrollIntoView({behavior: "smooth"});
 
-      setTimeout(()=>{
+      setTimeout(() => {
         section.classList.remove("destaque");
-      }, 3000);
+        section.style.boxShadow = "none"; //remove a sombra aplicada
+      }, 1000);
     }
   }
 });
