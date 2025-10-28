@@ -35,6 +35,17 @@ body {
   color: #00ff99 !important;
 }
 
+.a_li_header_halloween{
+  color: aliceblue !important;
+  text-decoration: none;
+  /* Tira o sublinhado */
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+.a_li_header_halloween:hover{
+  color: orange !important;
+}
+
 .dropdown-item.a_li_header {
   color: aliceblue !important;
   background-color: transparent !important;
@@ -51,10 +62,26 @@ body {
   border-radius: 15px;
 }
 
+.dropmenu-marcas-halloween {
+  background-color: rgb(255, 142, 14);
+  border-radius: 15px;
+}
+
 .miniverse {
   color: aliceblue;
   font-size: 22px;
   margin-bottom: 5px;
+}
+
+/* Hamburguer do menu */
+.navbar-toggler {
+  border-color: #1cbe7e; /* muda a cor da borda */
+  background-color: transparent; 
+}
+
+/* Cor dos "risquinhos" do ícone */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* ======== CONTEÚDO PRINCIPAL ======== */
@@ -125,7 +152,24 @@ body {
 .badge-vilao{
   background-color: rgb(92, 39, 92);
 }
-
+.badge-tlou{
+  background-color: #453019;
+}
+.badge-apocalipse{
+  background-color: #0a360e;
+}
+.badge-Limitado{
+  background-color: black;
+}
+.badge-eventos{
+  background-color: rgb(241, 93, 118);
+}
+.badge-assas{
+  background-color: red;
+}
+.badge-hallo{
+  background-color: orange;
+}
 
 .galeria {
   flex: 1;
@@ -237,6 +281,32 @@ body {
   transform: scale(0.98);
 }
 
+.botao-halloween{
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.7rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 218px;
+}
+
+.botao-halloween:hover {
+  background-color: rgb(224, 146, 0);
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.botao-halloween:active {
+  transform: scale(0.98);
+}
+
 /* ======== DESCRIÇÃO ======== */
 .descricao {
   margin-top: 2rem;
@@ -259,6 +329,16 @@ body {
   padding-left: 8px !important;
   color: #333 !important;
   transition: all 0.3s ease !important;
+}
+
+.select2-container .select2-selection--single{
+  height: 20px!important;
+  width: 67px!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  top: 1px !important;
+  position: static!important;
 }
 
 /* Hover no campo */
@@ -300,10 +380,16 @@ body {
   font-weight: 500;
 }
 
+.select2-container--open .select2-dropdown{
+  width: 60px!important;
+  margin-left: 3px;
+}
+
 /* Texto das opções da lista */
 .select2-container--default .select2-results__option {
   color: #111 !important;
   background-color: #fff !important;
+  text-align: center;
 }
 
 /* Opção selecionada */
@@ -320,6 +406,78 @@ body {
 
 
 
+
+/*            HALLOWEEEENNNNNNNNNNNNNN*/
+
+.tema-laranja{
+  background-color: #222425;
+  margin: 0;
+  color: aliceblue;
+  font-family: 'Ruda', sans-serif;
+}
+
+.tema-laranja .select_quantidade.form-select:hover {
+  background-color: #ffe0b2 !important;
+  border-color: #ff9800 !important;
+}
+
+.tema-laranja .select_quantidade.form-select:focus {
+  border-color: #ff9800 !important;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5) !important;
+}
+
+/* SELECT2 */
+.tema-laranja .select2-container--default .select2-selection--single {
+  border: 1px solid #ff9800 !important;
+}
+
+.tema-laranja .select2-container--default .select2-selection--single:hover {
+  border-color: #ff9800 !important;
+  background-color: #fff4e0 !important;
+}
+
+.tema-laranja .select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #ff9800 !important;
+  color: #fff !important;
+}
+
+.tema-laranja .select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: #ffe0b2 !important;
+  color: #e65100 !important;
+}
+
+/* Seta */
+.tema-laranja .select2-container--default .select2-selection__arrow b {
+  border-color: #ff9800 transparent transparent transparent !important;
+}
+
+.tema-laranja .select2-container--open .select2-selection__arrow b {
+  border-color: transparent transparent #ff9800 transparent !important;
+}
+
+/* BOTÃO COMPRAR */
+.tema-laranja .botao-comprar {
+  background-color: #ff9800 !important;
+}
+
+.tema-laranja .botao-comprar:hover {
+  background-color: #e68900 !important;
+  transform: scale(1.03);
+}
+
+.tema-laranja .botao-comprar:active {
+  background-color: #cc7a00 !important;
+}
+
+/* BOTÃO HALLOWEEN (caso queira garantir que mantenha o mesmo tom) */
+.tema-laranja .botao-halloween {
+  background-color: #ff9800 !important;
+}
+
+.tema-laranja .botao-halloween:hover {
+  background-color: #e68900 !important;
+}
+
 /* ======== DESCRIÇÃO ======== */
 .descricao {
   margin-top: 2rem;
@@ -330,6 +488,19 @@ body {
 
 .descricao h2 {
   color: #2d9b68;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.halloween{
+  margin-top: 2rem;
+  background: #252525;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.halloween h2{
+  color: orange!important;
   margin-bottom: 16px;
   font-size: 24px;
 }
@@ -387,6 +558,53 @@ body {
   color: #2d9b68;
 }
 
+.especificacoes_halloween {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.especificacoes_halloween li {
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  color: #d0d0d0;
+}
+
+.especificacoes_halloween li:last-child {
+  border-bottom: none;
+}
+
+.especificacoes_halloween strong {
+  color: orange;
+  margin-right: 8px;
+}
+
+.pq_escolher_halloween {
+  margin-top: 12px;
+}
+
+.pq_escolher_halloween strong {
+  color: #999999;
+}
+
+.acompanha_halloween {
+  background: #333;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+  border-left: 4px solid orange;
+}
+
+.acompanha_halloween p {
+  margin: 0;
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+.acompanha_halloween strong {
+  color: orange;
+}
+
 /* ======== FOOTER ======== */
 footer {
   background-color: black;
@@ -424,6 +642,14 @@ footer a {
 
 footer a:hover {
   color: #00ff99;
+}
+
+footer a:hover {
+  color: #00ff99;
+}
+
+.a_footer_halloween:hover{
+  color: orange;
 }
 
 @media (max-width: 992px) {

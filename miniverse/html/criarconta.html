@@ -74,15 +74,15 @@
                 </div>
                 <div class="col-12">
                     <label for="inputEmail" class="form-label" style="color: white;">E-mail</label>
-                    <input type="text" class="form-control" id="inputEmail">
+                    <input type="email" class="form-control" id="inputEmail">
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword" class="form-label" style="color: white;">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" id="inputPassword">
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword" class="form-label" style="color: white;">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="text" class="form-control" id="inputPassword">
                 </div>
                 <div class="col-12">
                     <label for="ss" class="form-label" style="color: white;">Endereço</label>
@@ -127,7 +127,7 @@
                 </div>
                 <div class="col-md-2">
                     <label for="inputZip" class="form-label" style="color: white;">CEP</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="number" class="form-control" id="inputZip">
                 </div>
                 <a href="conta.html" style="text-decoration: none;">
                     <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%;">
@@ -219,15 +219,35 @@
         crossorigin="anonymous"></script>
 
     <script>
-        document.querySelector(".btn.btn-primary").addEventListener("click", function (err) {
-            err.preventDefault(); // evita que recarregue a página
+        document.querySelector(".btn.btn-primary").addEventListener("click", function (e) {
+            e.preventDefault();
 
             // Coleta os dados
-            const nome = document.getElementById("inputNome").value;
-            const email = document.getElementById("inputEmail").value;
-            const senha = document.getElementById("inputPassword").value;
-            const endereco = document.getElementById("inputAddress").value;
-            const cidade = document.getElementById("inputCity").value;
+            const nome = document.getElementById("inputNome").value.trim();
+            const email = document.getElementById("inputEmail").value.trim();
+            const senha = document.getElementById("inputPassword").value.trim();
+            const endereco = document.getElementById("inputAddress").value.trim();
+            const cidade = document.getElementById("inputCity").value.trim();
+            const cep = document.getElementById("inputZip").value.trim();
+
+            // Verifica se há campos vazios
+            if (!nome || !email || !senha || !endereco || !cidade || !cep) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+
+            // Validação da senha forte
+            const senhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!senhaForte.test(senha)) {
+                alert("A senha deve ter no mínimo 8 caracteres e conter:\n- Letra maiúscula\n- Letra minúscula\n- Número\n- Caractere especial");
+                return;
+            }
+
+            // Validação do CEP
+            if (!/^\d{8}$/.test(cep)) {
+                alert("O CEP deve conter exatamente 8 números.");
+                return;
+            }
 
             // Pega usuários já cadastrados ou cria um novo array
             const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -239,13 +259,14 @@
                 return;
             }
 
-            // Salva novo usuário
-            usuarios.push({ nome, email, senha, endereco, cidade });
+            // Cria e salva o novo usuário
+            usuarios.push({ nome, email, senha, endereco, cidade, cep });
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
             alert("Conta criada com sucesso!");
-            window.location.href = "index.html"; // redireciona
+            window.location.href = "index.html";
         });
+
     </script>
 
 </body>

@@ -50,6 +50,17 @@ body {
   margin-bottom: 5px;
 }
 
+/* Hamburguer do menu */
+.navbar-toggler {
+  border-color: #1cbe7e; /* muda a cor da borda */
+  background-color: transparent; 
+}
+
+/* Cor dos "risquinhos" do ícone */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 /*perfil*/
 
 .test:focus {
@@ -64,3 +75,56 @@ body {
 .marca-section.destaque{
     transform: scale(1.02);
 }
+
+/*Principal do site*/
+.card_lancamento {
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.card_lancamento img {
+  height: 280px;
+  object-fit: contain;
+  background-color: #1e1e1e;
+  border-radius: 10px 10px 0 0;
+}
+
+.card_lancamento .btn {
+  margin-top: 10px;
+}
+
+
+/*Detalhes específicos de cada marca*/
+/*Marvel*/
+.card_marvel:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px red;
+}
+.button_marvel {
+  background-color: red;
+  color: white;
+  border: 1px solid red !important;
+  transition: background-color 0.3s ease;
+}
+.button_marvel:hover {
+  background-color: #0000;
+}
+
+/*DC*/
+.card_dc:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px blue;
+}
+.button_dc {
+  background-color: blue;
+  color: white;
+  border: 1px solid blue !important;
+  transition: background-color 0.3s ease;
+}
+.button_dc:hover {
+  background-color: #0000;
+}
+
+/*Dragon Ball*/

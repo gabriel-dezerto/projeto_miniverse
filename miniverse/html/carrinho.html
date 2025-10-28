@@ -12,6 +12,29 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Compra finalizada!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Obrigado por escolher a Miniverse, aproveite!
+                </div>
+                <div class="modal-footer" style="border-top: none;">
+                    <a href="index.html"><button type="button" class="btn btn-primary" style="background-color: #198754; border-color: #198754;">Finalizar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <header style="font-size: 20px; background-color: #092e2b;">
         <div class="line"></div>
         <nav class="navbar navbar-expand-lg">
@@ -68,27 +91,26 @@
         <div class="conteudo-c">
             <div class="produtos-c">
                 <div class="produto-c">
-                    <img src="../images/testecarrinho.svg">
+                    <img src="../images/coroa_planos.png">
                     <div class="detalhesp-c">
-                        <h1>Produto**</h1>
+                        <h1>Plano de Assinatura Ativo</h1>
                         <p>Descrição do produto**</p>
+                    </div>
+                    <div style="margin-left: auto; margin-right: 6%;">
+                        <h1>R$249,90/mês</h1>
                     </div>
                 </div>
                 <hr class="linha-c">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Descrição do produto**</small></p>
-                        </div>
-                      </div>
+                <div class="produto-c">
+                    <img src="../images/produtos_dragonBall/Vegeta.png" style="border-radius: 20px;">
+                    <div class="detalhesp-c">
+                        <h1>Vegeta</h1>
+                        <p>Descrição do produto**</p>
                     </div>
-                  </div>
+                    <div style="margin-left: auto; margin-right: 6%;">
+                        <h1>R$200,00</h1>
+                    </div>
+                </div>
             </div>
             <div class="total-c">
                 <div class="titulo-total-c">
@@ -97,15 +119,52 @@
                     </div>
                     <div class="preco-total">
                         <b>
-                            <p>400R$</p>
+                            <p>R$449,90</p>
                         </b>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div style="margin-top: 3%;">
+                    <div style="font-size: 2.5vh;">
                         <p>Método de pagamento:</p>
                     </div>
-
+                    <div style="display: flex; justify-content: space-between; font-size: 2.2vh;">
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    PIX
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    Crédito
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Débito
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    Boleto
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botao-comprar-c">
+                    <button type="button" class="btn btn-outline-success button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" style="margin-top: 2%;">
+                        Comprar
+                    </button>
                 </div>
             </div>
         </div>

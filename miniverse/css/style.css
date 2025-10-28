@@ -55,6 +55,17 @@ body {
   margin-bottom: 5px;
 }
 
+/* Hamburguer do menu */
+.navbar-toggler {
+  border-color: #1cbe7e; /* muda a cor da borda */
+  background-color: transparent; 
+}
+
+/* Cor dos "risquinhos" do ícone */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 /*perfil*/
 
 .test:focus {
@@ -180,6 +191,71 @@ body {
   opacity: 1;
 }
 
+/*Elementos da página de evento sazonal*/
+.a_li_header_halloween{
+  color: aliceblue !important;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+.a_li_header_halloween:hover{
+  color: orange !important;
+}
+
+.titulo-halloween{
+  font-family: 'Shlop', sans-serif;
+  color: orange;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 10px #ff6600;
+}
+
+.card_halloween {
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card_halloween img {
+  height: 400px;
+  object-fit: contain;
+  background-color: #00000033;
+  border-radius: 10px 10px 0 0;
+}
+
+.card_halloween:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px orange;
+}
+
+.card_halloween .button_halloween {
+  margin-top: 10px;
+}
+
+.button_halloween {
+  background-color: orange;
+  color: black;
+  transition: background-color 0.3s ease;
+  border-color: orange;
+}
+
+.button_halloween:hover {
+  background-color: #0000;
+  border-color: orange;
+}
+
+.img_footer_halloween{
+  filter: hue-rotate(230deg);
+}
+
+.a_footer_halloween:hover{
+  color: orange;
+}
+
+/*---------------------------------------------------------------------*/
 
 .card_lancamento {
   background-color: #1e1e1e;
@@ -350,59 +426,6 @@ body {
   width: 100%;
 }
 
-/*Evento sazonal*/
-.titulo-halloween{
-  font-family: 'Shlop', sans-serif;
-  color: orange;
-  font-size: 80px;
-  text-align: center;
-  letter-spacing: 5px;
-  text-shadow: 2px 2px 10px #ff6600;
-}
-
-.card_halloween {
-  background-color: #1e1e1e;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.card_halloween img {
-  height: 400px;
-  object-fit: contain;
-  background-color: #00000033;
-  border-radius: 10px 10px 0 0;
-}
-
-.card_halloween:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px orange;
-}
-
-.card_halloween .button_halloween {
-  margin-top: 10px;
-}
-
-.button_halloween {
-  background-color: orange;
-  color: black;
-  transition: background-color 0.3s ease;
-  border-color: orange;
-}
-
-.button_halloween:hover {
-  background-color: #0000;
-  border-color: orange;
-}
-
-.img_footer_halloween{
-  filter: hue-rotate(230deg);
-}
-
-.a_footer_halloween:hover{
-  color: orange;
-}
 
 /*Footer*/
 

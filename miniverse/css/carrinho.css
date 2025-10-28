@@ -4,31 +4,33 @@ body {
 }
 
 /* HEADER */
-.line{
+.line {
     width: 100%;
     height: 4px;
     background-color: #00ff99;
 }
 
 .a_li_header {
-   color: aliceblue !important;          
-  text-decoration: none;     /* Tira o sublinhado */
-  margin-right: 15px;
-  transition: color 0.3s;
+    color: aliceblue !important;
+    text-decoration: none;
+    /* Tira o sublinhado */
+    margin-right: 15px;
+    transition: color 0.3s;
 }
 
 .a_li_header:hover {
-  color: #00ff99 !important;
+    color: #00ff99 !important;
 }
 
 .dropdown-item.a_li_header {
-  color: aliceblue !important;
-  background-color: transparent !important;
+    color: aliceblue !important;
+    background-color: transparent !important;
 }
 
 .dropdown-item.a_li_header:hover {
-  color: #00ff99 !important;
-  background-color: rgba(255, 255, 255, 0.1) !important; /* leve destaque */
+    color: #00ff99 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    /* leve destaque */
 }
 
 .dropmenu-marcas {
@@ -40,6 +42,18 @@ body {
     color: aliceblue;
     font-size: 22px;
     margin-bottom: 5px;
+}
+
+/* Hamburguer do menu */
+.navbar-toggler {
+    border-color: #1cbe7e;
+    /* muda a cor da borda */
+    background-color: transparent;
+}
+
+/* Cor dos "risquinhos" do ícone */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /*Principal da Home*/
@@ -56,7 +70,7 @@ body {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.div_diferencial_site:hover{
+.div_diferencial_site:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     transform: translateY(-5px);
 }
@@ -71,7 +85,7 @@ body {
     transform: translateY(-5px);
 }
 
-.card_slider{
+.card_slider {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -113,8 +127,8 @@ body {
     margin-bottom: 2%;
 }
 
-.linha-c { 
-    background-color: #ffffff;    
+.linha-c {
+    background-color: #ffffff;
     height: 2.5px;
     border: none;
     width: 95%;
@@ -185,42 +199,69 @@ footer {
     background-color: black;
     color: aliceblue;
     padding: 40px 0;
-  }
-  
-  /* Linha principal do footer */
-  footer .row {
+}
+
+/* Linha principal do footer */
+footer .row {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 80px; /* espaço entre colunas */
-    flex-wrap: nowrap; /* mantém tudo em uma linha */
+    gap: 80px;
+    /* espaço entre colunas */
+    flex-wrap: nowrap;
+    /* mantém tudo em uma linha */
     text-align: left;
-  }
-  
-  /* Cada coluna (ex: Marvel, DC...) */
-  footer .col {
+}
+
+/* Cada coluna (ex: Marvel, DC...) */
+footer .col {
     min-width: 150px;
-  }
-  
-  /* Títulos das colunas */
-  footer h5 {
+}
+
+/* Títulos das colunas */
+footer h5 {
     margin-bottom: 15px;
     font-size: 18px;
     color: #00ff99;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: aliceblue;
     text-decoration: none;
     display: block;
     margin-bottom: 6px;
     transition: color 0.3s;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     color: #00ff99;
-  }
-  
-  .miniF{
-      margin-bottom: 10px;
-  }
+}
+
+.miniF {
+    margin-bottom: 10px;
+}
+
+.form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: none;
+}
+
+.botao-comprar-c {
+    justify-content: center;
+    display: flex;
+    margin-top: 22%;
+    height: 17%;
+}
+
+.botao-comprar-c button {
+    width: 65%;
+    font-size: 2.8vh;
+    background-color: #198754;
+    color: #ffffff;
+}
+
+.botao-comprar-c button:hover {
+    background-color: #ffffff;
+    color: #198754;
+}

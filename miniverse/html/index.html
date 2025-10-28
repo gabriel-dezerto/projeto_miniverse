@@ -21,7 +21,7 @@
                 <p class="miniverse">MINIVERSE</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -82,7 +82,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Senha</label>
-                            <input type="text" class="form-control" id="recipient-name" style="box-shadow: none;">
+                            <input type="password" class="form-control" id="recipient-name" style="box-shadow: none;">
                         </div>
                     </form>
                 </div>
@@ -475,24 +475,63 @@
 
     <!--Script para o login-->
     <script>
-        document.querySelector("#exampleModal .btn-primary").addEventListener("click", function (err) {
-            err.preventDefault();
-
-            const email = document.querySelector("#exampleModal input[type='text']").value;
-            const senha = document.querySelectorAll("#exampleModal input[type='text']")[1].value;
-
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("exampleModal");
+            const modalBody = modal.querySelector(".modal-body");
+            const modalFooter = modal.querySelector(".modal-footer");
+            const modalTitle = document.getElementById("exampleModalLabel");
             const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 
-            const usuario = usuarios.find(user => user.email === email && user.senha === senha);
+            // --- Se o usuário já estiver logado ---
+            if (usuarioLogado) {
+                modalTitle.textContent = "Bem-vindo!";
+                modalBody.innerHTML = `
+                    <p style="text-align: center; font-size: 2.5vh;">
+                    Você está logado como <b>${usuarioLogado.nome}</b><br>
+                    (${usuarioLogado.email})
+                    </p>
+                `;
+                modalFooter.innerHTML = `
+                    <button type="button" class="btn btn-danger" id="logoutBtn"
+                    style="margin-left: auto; margin-right: auto; border-radius: 60px; width: 40%; font-size: 2.5vh;">
+                    Sair
+                    </button>
+                `;
 
-            if (usuario) {
-                localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-                alert("Login realizado com sucesso!");
-                window.location.href = "conta.html"; // redireciona pra página da conta
-            } else {
-                alert("E-mail ou senha incorretos!");
+                // Evento de logout
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    localStorage.removeItem("usuarioLogado");
+                    location.reload(); // recarrega para atualizar o modal
+                });
+
+                return; // encerra aqui, não precisa carregar o login
+            }
+
+            // --- Se NÃO estiver logado, configura o formulário de login ---
+            const btnLogin = modal.querySelector(".btn-primary");
+
+            if (btnLogin) {
+                btnLogin.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const inputs = modal.querySelectorAll("input[type='text'], input[type='password']");
+                    const email = inputs[0]?.value || "";
+                    const senha = inputs[1]?.value || "";
+
+                    const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+                    if (usuario) {
+                        localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+                        alert("Login realizado com sucesso!");
+                        window.location.href = "index.html"; 
+                    } else {
+                        alert("E-mail ou senha incorretos!");
+                    }
+                });
             }
         });
+
     </script>
 
 </body>
