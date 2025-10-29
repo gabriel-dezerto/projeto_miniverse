@@ -71,12 +71,13 @@
             <div class="mb-4">
                 <label for="cor" class="form-label"><strong>Cor principal</strong></label>
                 <select class="form-select" id="cor">
-                    <option selected>Selecione...</option>
+                    <option selected class="option">Selecione...</option>
                     <option value="vermelho">Vermelho</option>
                     <option value="preto">Preto</option>
                     <option value="dourado">Dourado</option>
                     <option value="prata">Prata</option>
                     <option value="branco">Branco</option>
+                    <option value="perso">Cor Identica a Miniatura</option>
                 </select>
             </div>
 
@@ -119,7 +120,7 @@
 
             <!-- Preço estimado -->
             <div class="preco mb-4">
-                <p><strong>Preço estimado:</strong> R$ <span id="preco">—</span></p>
+                <p><strong>Preço estimado:</strong> R$ <span id="preco">0</span></p>
             </div>
 
             <!-- Botão -->
@@ -144,6 +145,16 @@
         const precoSpan = document.getElementById('preco');
         const form = document.querySelector('.formulario-personalizacao');
 
+        // Defina os preços por cor
+        const precosCor = {
+            'vermelho': 20,
+            'preto': 20,
+            'dourado': 20,
+            'prata': 20,
+            'branco': 20,
+            'perso': 50
+        }
+
         // Defina os preços base por tamanho
         const precosTamanho = {
             '10cm': 99.90,
@@ -161,11 +172,13 @@
         function atualizarPreco() {
             const tamanho = tamanhoSelect.value;
             const base = baseSelect.value;
+            const cor = corSelect.value;
 
             const precoT = precosTamanho[tamanho] || 0;
             const precoB = precosBase[base] || 0;
+            const precoC = precosCor[cor] || 0;
 
-            const total = precoT + precoB;
+            const total = precoT + precoB + precoC;
 
             precoSpan.textContent = total > 0 ? total.toFixed(2).replace('.', ',') : '—';
             return total;
@@ -173,6 +186,7 @@
 
         tamanhoSelect.addEventListener('change', atualizarPreco);
         baseSelect.addEventListener('change', atualizarPreco);
+        corSelect.addEventListener('change', atualizarPreco);
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();

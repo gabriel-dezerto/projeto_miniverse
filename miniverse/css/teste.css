@@ -15,6 +15,7 @@ body {
   font-family: 'Ruda';
   src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
 }
+
 /* HEADER */
 .line {
   width: 100%;
@@ -35,14 +36,15 @@ body {
   color: #00ff99 !important;
 }
 
-.a_li_header_halloween{
+.a_li_header_halloween {
   color: aliceblue !important;
   text-decoration: none;
   /* Tira o sublinhado */
   margin-right: 15px;
   transition: color 0.3s;
 }
-.a_li_header_halloween:hover{
+
+.a_li_header_halloween:hover {
   color: orange !important;
 }
 
@@ -75,8 +77,9 @@ body {
 
 /* Hamburguer do menu */
 .navbar-toggler {
-  border-color: #1cbe7e; /* muda a cor da borda */
-  background-color: transparent; 
+  border-color: orange;
+  /* muda a cor da borda */
+  background-color: transparent;
 }
 
 /* Cor dos "risquinhos" do ícone */
@@ -123,51 +126,66 @@ body {
 }
 
 .badge-premium {
-  background-color: #c0392b;  
+  background-color: #c0392b;
 }
+
 .badge-colecionavel {
   background-color: #FF8269;
 }
+
 .badge-detalhes {
   background-color: #16a085;
 }
-.badge-hero{
+
+.badge-hero {
   background-color: #F5C827;
 }
-.badge-pintura{
-  background-color:#57128A ;
+
+.badge-pintura {
+  background-color: #57128A;
 }
-.badge-db{
+
+.badge-db {
   background-color: orange;
 }
-.badge-dc{
+
+.badge-dc {
   background-color: #2980b9;
 }
-.badge-mito{
+
+.badge-mito {
   background-color: rgb(106, 176, 255);
 }
-.badge-Star{
+
+.badge-Star {
   background-color: rgb(255, 187, 0);
 }
-.badge-vilao{
+
+.badge-vilao {
   background-color: rgb(92, 39, 92);
 }
-.badge-tlou{
+
+.badge-tlou {
   background-color: #453019;
 }
-.badge-apocalipse{
+
+.badge-apocalipse {
   background-color: #0a360e;
 }
-.badge-Limitado{
+
+.badge-Limitado {
   background-color: black;
 }
-.badge-eventos{
+
+.badge-eventos {
   background-color: rgb(241, 93, 118);
 }
-.badge-assas{
+
+.badge-assas {
   background-color: red;
 }
-.badge-hallo{
+
+.badge-hallo {
   background-color: orange;
 }
 
@@ -281,7 +299,7 @@ body {
   transform: scale(0.98);
 }
 
-.botao-halloween{
+.botao-halloween {
   background-color: orange;
   border: none;
   color: white;
@@ -331,14 +349,14 @@ body {
   transition: all 0.3s ease !important;
 }
 
-.select2-container .select2-selection--single{
-  height: 20px!important;
-  width: 67px!important;
+.select2-container .select2-selection--single {
+  height: 20px !important;
+  width: 67px !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 1px !important;
-  position: static!important;
+  position: static !important;
 }
 
 /* Hover no campo */
@@ -380,8 +398,8 @@ body {
   font-weight: 500;
 }
 
-.select2-container--open .select2-dropdown{
-  width: 60px!important;
+.select2-container--open .select2-dropdown {
+  width: 60px !important;
   margin-left: 3px;
 }
 
@@ -395,12 +413,12 @@ body {
 /* Opção selecionada */
 .select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #d6f5e3 !important;
-  color: #1e704c !important;
+  color: black !important;
 }
 
 /* Opção em hover */
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #2d9b68 !important;
+  background-color: orange !important;
   color: #fff !important;
 }
 
@@ -409,7 +427,7 @@ body {
 
 /*            HALLOWEEEENNNNNNNNNNNNNN*/
 
-.tema-laranja{
+.tema-laranja {
   background-color: #222425;
   margin: 0;
   color: aliceblue;
@@ -439,7 +457,7 @@ body {
 .tema-laranja .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #ff9800 !important;
   color: #fff !important;
-}
+};
 
 .tema-laranja .select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #ffe0b2 !important;
@@ -478,6 +496,98 @@ body {
   background-color: #e68900 !important;
 }
 
+/*ACCORDION*/
+.accordion {
+  --bs-accordion-bg: #252525;
+  background-color: #252525 !important;
+  color: white !important;
+}
+
+.accordion-button:not(.collapsed){
+  color: white;
+  background-color: #252525;
+  font-size: 25px;
+}
+
+.accordion-button{
+  padding: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.accordion-button:not(.collapsed)::after{
+ color: white;
+}
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+  color:white;
+  font-size: 20px;
+  border: none;
+} 
+
+/* ======== ACCORDION HALLOWEEN UNIFICADO ======== */
+.accordion-halloween .accordion-item {
+  background-color: #ff8800;
+  border: 1px solid #ff9800;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.25);
+}
+
+.accordion-halloween .accordion-button {
+  background-color: #ff8800;
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+
+.accordion-halloween .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-halloween .accordion-button:not(.collapsed) {
+  background-color: #ff8800;
+  color: #000;
+  box-shadow: none;
+}
+
+
+.accordion-halloween .accordion-body {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.especificacoes_halloween li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  list-style: none;
+  position: relative;
+  padding-left: 22px;
+}
+
+.especificacoes_halloween li::before {
+  content: "🕸️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.accordion-halloween strong {
+  color: orange;
+}
+
+.accordion-halloween .accordion-button::after {
+  filter: invert(1) brightness(0.8) sepia(1) hue-rotate(-20deg) saturate(4);
+}
+
+
 /* ======== DESCRIÇÃO ======== */
 .descricao {
   margin-top: 2rem;
@@ -492,15 +602,15 @@ body {
   font-size: 24px;
 }
 
-.halloween{
+.halloween {
   margin-top: 2rem;
   background: #252525;
   padding: 24px;
   border-radius: 8px;
 }
 
-.halloween h2{
-  color: orange!important;
+.halloween h2 {
+  color: orange !important;
   margin-bottom: 16px;
   font-size: 24px;
 }
@@ -648,7 +758,7 @@ footer a:hover {
   color: #00ff99;
 }
 
-.a_footer_halloween:hover{
+.a_footer_halloween:hover {
   color: orange;
 }
 
