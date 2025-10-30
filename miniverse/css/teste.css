@@ -418,14 +418,59 @@ body {
 
 /* Opção em hover */
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: orange !important;
+  background-color: rgb(27, 148, 57) !important;
   color: #fff !important;
+}
+
+
+/* ======== SELECT2 HALLOWEEN (LARANJA) ======== */
+.tema-laranja .select2-container--default .select2-selection--single {
+  border: 1px solid #ff9800 !important;
+  background-color: #fff !important;
+}
+
+.tema-laranja .select2-container--default .select2-selection--single:hover {
+  border-color: #ff9800 !important;
+  background-color: #fff4e0 !important;
+}
+
+/* Quando o select2 é aberto */
+.tema-laranja .select2-container--open .select2-selection--single {
+  border-color: #ff9800 !important;
+}
+
+/* Opção destacada (hover) */
+.tema-laranja .select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #ff9800 !important;
+  color: #fff !important;
+}
+
+/* Opção selecionada */
+.tema-laranja .select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: #ffe0b2 !important;
+  color: #e65100 !important;
+}
+
+/* Seta (aberta e fechada) */
+.tema-laranja .select2-container--default .select2-selection__arrow b {
+  border-color: #ff9800 transparent transparent transparent !important;
+}
+
+.tema-laranja .select2-container--open .select2-selection__arrow b {
+  border-color: transparent transparent #ff9800 transparent !important;
+}
+
+/* Texto dentro da caixa */
+.tema-laranja .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #222 !important;
+  font-weight: 500;
 }
 
 
 
 
 /*            HALLOWEEEENNNNNNNNNNNNNN*/
+
 
 .tema-laranja {
   background-color: #222425;
@@ -457,7 +502,9 @@ body {
 .tema-laranja .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #ff9800 !important;
   color: #fff !important;
-};
+}
+
+;
 
 .tema-laranja .select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #ffe0b2 !important;
@@ -503,26 +550,27 @@ body {
   color: white !important;
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
   color: white;
   background-color: #252525;
   font-size: 25px;
 }
 
-.accordion-button{
+.accordion-button {
   padding: 0;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
-.accordion-button:not(.collapsed)::after{
- color: white;
+.accordion-button:not(.collapsed)::after {
+  color: white;
 }
+
 .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
-  color:white;
+  color: white;
   font-size: 20px;
   border: none;
-} 
+}
 
 /* ======== ACCORDION HALLOWEEN UNIFICADO ======== */
 .accordion-halloween .accordion-item {
@@ -532,6 +580,7 @@ body {
   margin-bottom: 15px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.25);
+  height: 4.8vh;
 }
 
 .accordion-halloween .accordion-button {
@@ -573,7 +622,6 @@ body {
 }
 
 .especificacoes_halloween li::before {
-  content: "🕸️";
   position: absolute;
   left: 0;
   top: 0;
@@ -587,6 +635,95 @@ body {
   filter: invert(1) brightness(0.8) sepia(1) hue-rotate(-20deg) saturate(4);
 }
 
+
+/* ======== ACCORDION VERDE (PADRÃO MINIVERSE) ======== */
+.accordion-verde .accordion-item {
+  background-color: #2d9b68;
+  border: 1px solid #2d9b68;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(45, 155, 104, 0.25);
+  height: 4.8vh;
+}
+
+.accordion-verde .accordion-button {
+  background-color: #2d9b68;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.accordion-verde .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-verde .accordion-button:not(.collapsed) {
+  background-color: #2d9b68;
+  color: #fff;
+  box-shadow: none;
+}
+
+.accordion-verde .accordion-body {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  padding: 20px;
+  border-top: 1px solid rgba(45, 155, 104, 0.3);
+}
+
+.especificacoes_verde li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  list-style: none;
+  position: relative;
+  padding-left: 22px;
+}
+
+.especificacoes_verde li::before {
+  content: "🍃";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.accordion-verde strong {
+  color: #2d9b68;
+}
+
+.accordion-verde .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.pq_escolher_verde {
+  margin-top: 12px;
+}
+
+.pq_escolher_verde strong {
+  color: #999999;
+}
+
+.acompanha_verde {
+  background: #333;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+  border-left: 4px solid #2d9b68;
+}
+
+.acompanha_verde p {
+  margin: 0;
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+.acompanha_verde strong {
+  color: #2d9b68;
+}
 
 /* ======== DESCRIÇÃO ======== */
 .descricao {

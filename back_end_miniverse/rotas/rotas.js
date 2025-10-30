@@ -44,7 +44,7 @@ router.get('/:id', (req,res) =>{
 });
 
 router.post('/criaproduto', (req, res) =>{
-//curl -X POST -H "Content-Type: application/json" -d '{"id": 5, "descricao": "", "status": "teste"}' http://localhost:3000/listaDeTarefas/criaproduto
+//curl -X POST -H "Content-Type: application/json" -d '{"id": 5, "descricao": "", "status": "teste"}' http://localhost:3000/criaproduto
     fs.readFile('./data/produtos.json', 'utf8', (err, data) =>{
         if(err){
             res.status(500).send("Erro ao ler o arquivo.");
@@ -94,7 +94,7 @@ router.put('/:id', (req,res) =>{
         }
         try{
             const dadosJSON = JSON.parse(data);
-            const index = dadosJSON.findIndex(produto => produto.id === id);
+            const index = dadosJSON.findIndex(produto => produto.id === id_site);
 
             dadosJSON[index].descricao = atualizaProduto.descricao
             dadosJSON[index].preco = atualizaProduto.preco

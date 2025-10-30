@@ -109,7 +109,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .button_marvel:hover {
-  background-color: #0000;
+  background-color: #1E1E1E;
 }
 
 /*DC*/
@@ -124,7 +124,146 @@ body {
   transition: background-color 0.3s ease;
 }
 .button_dc:hover {
-  background-color: #0000;
+  background-color: #1E1E1E;
 }
 
 /*Dragon Ball*/
+.card_db:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(255, 140, 0);
+}
+.button_db {
+  background-color: rgb(255, 140, 0);
+  color: white;
+  border: 1px solid rgb(255, 140, 0) !important;
+  transition: background-color 0.3s ease;
+}
+.button_db:hover {
+  background-color: #1E1E1E;
+}
+
+/*The Last of Us*/
+.card_tlou:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(128, 64, 0);
+}
+.button_tlou {
+  background-color: rgb(128, 64, 0);
+  color: white;
+  border: 1px solid rgb(128, 64, 0) !important;
+  transition: background-color 0.3s ease;
+}
+.button_tlou:hover {
+  background-color: #1E1E1E;
+}
+
+/*Star Wars*/
+.card_star:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(255, 215, 0);
+}
+.button_star {
+  background-color: rgb(255, 215, 0);
+  color: white;
+  border: 1px solid rgb(255, 215, 0) !important;
+  transition: background-color 0.3s ease;
+}
+.button_star:hover {
+  background-color: #1E1E1E;
+}
+
+/*Seres mitológicos*/
+.card_seres:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgb(138, 43, 226);
+}
+.button_seres {
+  background-color: rgb(138, 43, 226);
+  color: white;
+  border: 1px solid rgb(138, 43, 226) !important;
+  transition: background-color 0.3s ease;
+}
+.button_seres:hover {
+  background-color: #1E1E1E;
+}
+
+
+/*Footer*/
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  padding: 40px 0;
+}
+
+/* Linha principal do footer */
+footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  /* 🔹 permite quebrar linha */
+  text-align: left;
+}
+
+/* Cada coluna (ex: Marvel, DC...) */
+footer .col {
+  min-width: 150px;
+  flex: 1 1 200px;
+  /* 🔹 faz cada coluna se ajustar */
+  margin-bottom: 30px;
+  /* espaço entre linhas quando quebrar */
+}
+
+/* Títulos das colunas */
+footer h5 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+footer a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00ff99;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 992px) {
+  footer .row {
+    gap: 40px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .row {
+    flex-direction: column;
+    /* empilha as colunas */
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer .col {
+    text-align: center;
+  }
+
+  footer h5 {
+    font-size: 16px;
+  }
+}
+
+.miniF {
+  margin-bottom: 10px;
+}
