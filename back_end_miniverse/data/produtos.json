@@ -4,146 +4,167 @@
         "marca": "Marvel",
         "nome": "Homem-Aranha",
         "descricao": "",
-        "preco": 519.9
+        "preco": 519.99,
+        "quantidade": ""
     },
     {
         "id": 1002,
         "marca": "Marvel",
         "nome": "Homem de Ferro",
         "descricao": "",
-        "preco": 599.9
+        "preco": 599.99,
+        "quantidade": ""
     },
     {
         "id": 1003,
         "marca": "Marvel",
         "nome": "Capitão América",
         "descricao": "",
-        "preco": 539.9
+        "preco": 539.99,
+        "quantidade": ""
     },
     {
         "id": 2001,
         "marca": "DC",
         "nome": "Batman",
         "descricao": "",
-        "preco": 569.9
+        "preco": 569.99,
+        "quantidade": ""
     },
     {
         "id": 2002,
         "marca": "DC",
         "nome": "Superman",
         "descricao": "",
-        "preco": 549.9
+        "preco": 549.99,
+        "quantidade": ""
     },
     {
         "id": 2003,
         "marca": "DC",
         "nome": "Mulher-Maravilha",
         "descricao": "",
-        "preco": 529.9
+        "preco": 529.99,
+        "quantidade": ""
     },
     {
         "id": 3001,
         "marca": "Dragon Ball",
         "nome": "Goku",
         "descricao": "",
-        "preco": 549.9
+        "preco": 549.99,
+        "quantidade": ""
     },
     {
         "id": 3002,
         "marca": "Dragon Ball",
         "nome": "Vegeta",
         "descricao": "",
-        "preco": 529.9
+        "preco": 529.99,
+        "quantidade": ""
     },
     {
         "id": 3003,
         "marca": "Dragon Ball",
         "nome": "Piccolo",
         "descricao": "",
-        "preco": 499.9
+        "preco": 499.99,
+        "quantidade": ""
     },
     {
         "id": 4001,
         "marca": "The Last of Us",
         "nome": "Joel",
         "descricao": "",
-        "preco": 539.9
+        "preco": 539.99,
+        "quantidade": ""
     },
     {
         "id": 4002,
         "marca": "The Last of Us",
         "nome": "Ellie",
         "descricao": "",
-        "preco": 559.9
+        "preco": 559.99,
+        "quantidade": ""
     },
     {
         "id": 4003,
         "marca": "The Last of Us",
         "nome": "Abby",
         "descricao": "",
-        "preco": 499.9
+        "preco": 499.99,
+        "quantidade": ""
     },
     {
         "id": 5001,
         "marca": "Star Wars",
         "nome": "Darth Vader",
         "descricao": "",
-        "preco": 599.9
+        "preco": 599.99,
+        "quantidade": ""
     },
     {
         "id": 5002,
         "marca": "Star Wars",
         "nome": "Yoda",
         "descricao": "",
-        "preco": 519.9
+        "preco": 519.99,
+        "quantidade": ""
     },
     {
         "id": 5003,
         "marca": "Star Wars",
         "nome": "Leia",
         "descricao": "",
-        "preco": 499.9
+        "preco": 499.99,
+        "quantidade": ""
     },
     {
         "id": 6001,
         "marca": "Seres Mitológicos",
         "nome": "Zeus",
         "descricao": "",
-        "preco": 569.9
+        "preco": 569.99,
+        "quantidade": ""
     },
     {
         "id": 6002,
         "marca": "Seres Mitológicos",
         "nome": "Minotauro",
         "descricao": "",
-        "preco": 519.9
+        "preco": 519.99,
+        "quantidade": ""
     },
     {
         "id": 6003,
         "marca": "Seres Mitológicos",
         "nome": "Medusa",
         "descricao": "",
-        "preco": 539.9
+        "preco": 539.99,
+        "quantidade": ""
     },
     {
         "id": 9101,
         "marca": "Halloween",
         "nome": "Jason",
         "descricao": "",
-        "preco": 519.9
+        "preco": 519.99,
+        "quantidade": ""
     },
     {
         "id": 9102,
         "marca": "Halloween",
         "nome": "Ghostface",
         "descricao": "",
-        "preco": 509.9
+        "preco": 509.99,
+        "quantidade": ""
     },
     {
         "id": 9103,
         "marca": "Halloween",
         "nome": "Pennywise",
         "descricao": "",
-        "preco": 549.9
+        "preco": 549.99,
+        "quantidade": ""
     }
 ]

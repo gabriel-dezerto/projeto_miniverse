@@ -144,27 +144,26 @@ router.delete('/:id', (req,res) =>{
 
 
 
-//Rotas do carrinho
+// ==========================================
+// ROTAS DO CARRINHO
+// ==========================================
 
 const produtosPath = path.join(__dirname, '../data/produtos.json');
 const carrinhoPath = path.join(__dirname, '../data/carrinho.json');
-
 
 const readJSON = (filePath) => {
     return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 };
 
-
 const writeJSON = (filePath, data) => {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
 };
 
-
 router.get('/carrinho', (req, res) => {
-    const carrinho = readJSON(carrinhoPath);
-    res.json(carrinho);
+    // const carrinho = readJSON(carrinhoPath);
+    // res.json(carrinho);
+    res.send('asdfasd')
 });
-
 
 router.post('/carrinho', (req, res) => {
     const { id, quantidade } = req.body;
@@ -180,13 +179,18 @@ router.post('/carrinho', (req, res) => {
     if (itemExistente) {
         itemExistente.quantidade += quantidade;
     } else {
-        carrinho.push({ id: produto.id, nome: produto.nome, preco: produto.preco, quantidade });
+        carrinho.push({ 
+            id: produto.id, 
+            nome: produto.nome, 
+            marca: produto.marca,  
+            preco: produto.preco, 
+            quantidade 
+        });
     }
 
     writeJSON(carrinhoPath, carrinho);
     res.status(201).json({ message: 'Produto adicionado ao carrinho', carrinho });
 });
-
 
 router.put('/carrinho/:id', (req, res) => {
     const { id } = req.params;
@@ -202,7 +206,6 @@ router.put('/carrinho/:id', (req, res) => {
     writeJSON(carrinhoPath, carrinho);
     res.json({ message: 'Quantidade atualizada', carrinho });
 });
-
 
 router.delete('/carrinho/:id', (req, res) => {
     const { id } = req.params;
