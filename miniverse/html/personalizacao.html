@@ -55,17 +55,53 @@
                     </div>
                     <a href="carrinho.html"><img src="../images/icon_carrinho.svg" class="d-flex"
                             style="width: 30px; margin-right: 20px;  filter: invert();"></a>
-                    <a href="conta.html" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                    <a href="criarconta.html" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
                             src="../images/icon_conta.svg" class="d-flex" style="width: 30px; filter: invert();"></a>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Modal login -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="margin-top: 10%;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none; margin-top: 2%;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin-left: 0; box-shadow: none;"></button>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"
+                        style="position: absolute; left: 50%; transform: translateX(-50%); font-size: 4vh !important; margin-top: 10%;">
+                        Login</h1>
+                </div>
+                <div class="modal-body" style="margin-top: 2%;">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">E-mail</label>
+                            <input type="text" class="form-control test" id="recipient-name" style="box-shadow: none;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Senha</label>
+                            <input type="password" class="form-control" id="recipient-name" style="box-shadow: none;">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%;">
+                    <button type="button" class="btn btn-primary"
+                        style="margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 40%; border-radius: 60px; font-size: 2.5vh;">Entrar</button>
+                </div>
+                <div style="margin-left: auto; margin-right: auto; margin-top: 1%; margin-bottom: 3%;">
+                    <p>Não tem uma conta? <a href="criarconta.html"
+                            style="text-decoration: none; color: #1cbe7e;"><b>Crie uma</b></a></p>
+                </div><b>
+            </div>
+        </div>
+    </div>
+
     <main class="container personalizacao">
         <form class="formulario-personalizacao">
             <h2>Detalhes da Personalização</h2>
-            <p>Escolha abaixo as opções e monte sua miniatura exclusiva.</p>
+            <p style="margin-bottom: 2%;">Escolha abaixo as opções e monte sua miniatura exclusiva.</p>
 
             <!-- Cor -->
             <div class="mb-4">
@@ -104,34 +140,35 @@
             </div>
 
             <!-- Gravação personalizada -->
-            <div class="mb-4">
+            <div class="mb-4 div-errada">
                 <label for="gravacao" class="form-label"><strong>Gravação personalizada</strong> (opcional)</label>
                 <input type="text" id="gravacao" class="form-control" maxlength="30"
                     placeholder="Ex: 'Herói da Galáxia' ou seu nome">
-                <small class="text-muted">Máximo de 30 caracteres</small>
             </div>
 
             <!-- Upload de imagem -->
             <div class="mb-4">
                 <label for="imagem" class="form-label"><strong>Imagem de referência</strong> (opcional)</label>
                 <input type="file" id="imagem" class="form-control">
-                <small class="text-muted">Formatos aceitos: JPG, PNG, WEBP</small>
             </div>
 
             <!-- Preço estimado -->
-            <div class="preco mb-4">
-                <p><strong>Preço estimado:</strong> R$ <span id="preco">0</span></p>
+            <div class="preco mb-4" style="margin-top: 1%;">
+                <p style="margin-bottom: 0%; font-size: 3vh;"><strong>Valor estimado:</strong> R$ <span
+                        id="preco">0</span></p>
             </div>
 
             <!-- Botão -->
-            <div class="text-center">
-                <button type="submit" class="btn-personalizar">Adicionar ao Carrinho</button>
+            <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%; width: 130%;">
+                <button type="button" class="btn btn-primary"
+                    style="width: 100%; margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 20%; border-radius: 60px; font-size: 2.5vh; margin-top: 2%;">Adicionar
+                    ao carrinho</button>
             </div>
         </form>
     </main>
 
     <footer class="text-center mt-5 py-4">
-        <p>© 2025 Miniverse — Personalização Premium</p>
+        <p style="color: #949494;">© 2025 Miniverse — Personalização Premium</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
