@@ -22,6 +22,61 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/testenovo', (req, res) => {
+    res.send('foi')
+})
+const carrinhoPath = path.join(__dirname, '../data/carrinho.json');
+
+
+function readJSON(filePath) {
+    try {
+        const data = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(data || '[]'); // garante que nunca retorne undefined
+    } catch (error) {
+        console.error('Erro ao ler arquivo JSON:', error);
+        return [];
+    }
+}
+
+const writeJSON = (filePath, data) => {
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
+};
+
+router.get('/carrinho', (req, res) => {
+    console.log("endpoint do carrinho!!!")
+    const carrinho = readJSON(carrinhoPath);
+    console.log('📦 Conteúdo do carrinho enviado para o front:', carrinho);
+    res.json(carrinho); // sempre envia JSON
+});
+// Rotas do carrinho
+
+router.post('/carrinho', (req, res) => {
+    const { id, quantidade } = req.body;
+    const produtos = readJSON(produtosFile);
+    const carrinho = readJSON(carrinhoPath);
+
+    const produto = produtos.find((p) => p.id === id);
+    if (!produto) {
+        return res.status(404).json({ error: 'Produto não encontrado' });
+    }
+
+    const itemExistente = carrinho.find((item) => item.id === id);
+    if (itemExistente) {
+        itemExistente.quantidade += quantidade;
+    } else {
+        carrinho.push({
+            id: produto.id,
+            nome: produto.nome,
+            marca: produto.marca,
+            preco: produto.preco,
+            quantidade
+        });
+    }
+
+    writeJSON(carrinhoPath, carrinho);
+    res.status(201).json({ message: 'Produto adicionado ao carrinho', carrinho });
+});
+
 router.get('/:id', (req, res) => {
     const id_site = parseInt(req.params.id);
     fs.readFile(produtosFile, 'utf8', (err, data) => {
@@ -145,48 +200,6 @@ router.delete('/:id', (req, res) => {
 
 
 
-// Rotas do carrinho
-const carrinhoPath = path.join(__dirname, '../data/carrinho.json');
-
-const readJSON = (filePath) => {
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-};
-
-const writeJSON = (filePath, data) => {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
-};
-
-router.get('/carrinho', (req, res) => {
-    const carrinho = readJSON(carrinhoPath);
-    res.json(carrinho);
-});
-
-router.post('/carrinho', (req, res) => {
-    const { id, quantidade } = req.body;
-    const produtos = readJSON(produtosFile);
-    const carrinho = readJSON(carrinhoPath);
-
-    const produto = produtos.find((p) => p.id === id);
-    if (!produto) {
-        return res.status(404).json({ error: 'Produto não encontrado' });
-    }
-
-    const itemExistente = carrinho.find((item) => item.id === id);
-    if (itemExistente) {
-        itemExistente.quantidade += quantidade;
-    } else {
-        carrinho.push({
-            id: produto.id,
-            nome: produto.nome,
-            marca: produto.marca,
-            preco: produto.preco,
-            quantidade
-        });
-    }
-
-    writeJSON(carrinhoPath, carrinho);
-    res.status(201).json({ message: 'Produto adicionado ao carrinho', carrinho });
-});
 
 router.put('/carrinho/:id', (req, res) => {
     const { id } = req.params;

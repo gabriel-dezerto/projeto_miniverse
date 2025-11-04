@@ -2,34 +2,32 @@ const API_URL = 'http://localhost:3000/api';
 
 // Função para adicionar itens ao carrinho
 async function carregarCarrinho() {
-    try{
+    console.log("🚀 carregarCarrinho() foi chamada");
+
+    try {
         const response = await fetch(`${API_URL}/carrinho`);
+        console.log("📡 Status da resposta:", response.status);
 
-        if(!response.ok){
-            throw new Error('Erro ao carregar o carrinho!!');
-        }
+        const textoBruto = await response.text();
+        console.log("🧩 Texto bruto recebido do backend:", textoBruto);
 
-        const carrinho = await response.json();
+        const carrinho = JSON.parse(textoBruto);
+        console.log("🧾 Carrinho convertido em JSON:", carrinho);
 
         renderizarCarrinho(carrinho);
         atualizarTotal(carrinho);
-    }
-    catch(error){
-        console.error("Erro ao carregar carrinho: ", error);
+    } catch (error) {
+        console.error("❌ Erro ao carregar carrinho:", error);
 
         const containerProdutos = document.querySelector('.produtos-c');
-        containerProdutos.innerHTML = `
-            <div style="text-align: center; padding: 50px; color: #dc3545;">
-                <h3>⚠️ Erro ao conectar com o servidor</h3>
-                <p>Verifique se o back-end está rodando em http://localhost:3000</p>
-                <p style="font-size: 14px; color: #666; margin-top: 20px;">
-                    Execute: <code>cd back_end_miniverse && node server.js</code>
-                </p>
-                <button class="btn btn-primary" onclick="location.reload()" style="margin-top: 20px">
-                    Tentar novamente
-                </button>
-            </div> 
-        `;
+        if (containerProdutos) {
+            containerProdutos.innerHTML = `
+                <div style="text-align: center; padding: 50px; color: #dc3545;">
+                    <h3>⚠️ Erro ao conectar com o servidor</h3>
+                    <p>${error}</p>
+                </div>
+            `;
+        }
     }
 }
 
@@ -72,7 +70,7 @@ function renderizarCarrinho(itens){
                     </div>
                     <div style="margin-left: auto; margin-right: 20px; text-align: right;">
                         <h1>R$ ${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</h1>
-                        <p style="font-size: 14px; color: #666;">
+                        <p style="font-size: 14px; color:rgba(255, 255, 255, 0.57);">
                             ${item.quantidade}x R$ ${item.preco.toFixed(2).replace('.', ',')}
                         </p>
                         <button class="btn btn-danger btn-sm" onclick="removerDoCarrinho(${item.id})" style="margin-top: 10px;">
@@ -82,9 +80,9 @@ function renderizarCarrinho(itens){
                 </div>
             </div>
             ${index < itens.length - 1 ? '<hr class="linha-c">' : ''} 
-        `;//ler sobre a ultima linha ^
+        `;
 
-        containerProdutos.innerHTML += produtoHTML; //ler sobre
+        containerProdutos.innerHTML += produtoHTML; 
     });
 }
 
