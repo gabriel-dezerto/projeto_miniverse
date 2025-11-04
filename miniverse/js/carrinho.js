@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:3000/api';
 
 // Função para adicionar itens ao carrinho
 async function carregarCarrinho() {
