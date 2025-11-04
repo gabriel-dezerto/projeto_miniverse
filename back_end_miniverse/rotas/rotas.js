@@ -144,10 +144,7 @@ router.delete('/:id', (req,res) =>{
 
 
 
-// ==========================================
-// ROTAS DO CARRINHO
-// ==========================================
-
+// Rotas do carrinho
 const produtosPath = path.join(__dirname, '../data/produtos.json');
 const carrinhoPath = path.join(__dirname, '../data/carrinho.json');
 
@@ -160,9 +157,8 @@ const writeJSON = (filePath, data) => {
 };
 
 router.get('/carrinho', (req, res) => {
-    // const carrinho = readJSON(carrinhoPath);
-    // res.json(carrinho);
-    res.send('asdfasd')
+    const carrinho = readJSON(carrinhoPath);
+    res.json(carrinho);
 });
 
 router.post('/carrinho', (req, res) => {
@@ -182,7 +178,7 @@ router.post('/carrinho', (req, res) => {
         carrinho.push({ 
             id: produto.id, 
             nome: produto.nome, 
-            marca: produto.marca,  
+            marca: produto.marca, 
             preco: produto.preco, 
             quantidade 
         });
