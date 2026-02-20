@@ -345,6 +345,7 @@ body {
 .div_marcas {
   background-color: aquamarine;
   border-radius: 40px;
+  border: solid black 2px;
 
   margin-left: auto;
   margin-right: auto;
