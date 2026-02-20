@@ -51,10 +51,23 @@ router.get('/carrinho', (req, res) => {
 // Rotas do carrinho
 
 router.post('/carrinho', (req, res) => {
-    const { id, quantidade } = req.body;
-    const produtos = readJSON(produtosFile);
+    const { id, nome, marca, preco, quantidade, tipo } = req.body;
     const carrinho = readJSON(carrinhoPath);
 
+    // Itens especiais (planos e personalizações) já chegam com todos os dados
+    if (tipo === 'plano' || tipo === 'personalizacao') {
+        const itemExistente = carrinho.find((item) => item.id === id);
+        if (itemExistente) {
+            itemExistente.quantidade += (quantidade || 1);
+        } else {
+            carrinho.push({ id, nome, marca: marca || '', preco, quantidade: quantidade || 1, tipo });
+        }
+        writeJSON(carrinhoPath, carrinho);
+        return res.status(201).json({ message: 'Item adicionado ao carrinho', carrinho });
+    }
+
+    // Fluxo original para produtos do catálogo
+    const produtos = readJSON(produtosFile);
     const produto = produtos.find((p) => p.id === id);
     if (!produto) {
         return res.status(404).json({ error: 'Produto não encontrado' });

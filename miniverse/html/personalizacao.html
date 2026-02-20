@@ -245,34 +245,25 @@
         crossorigin="anonymous"></script>
 
     <script>
+        const API_URL = 'http://localhost:3000/api';
+
         const corSelect = document.getElementById('cor');
         const tamanhoSelect = document.getElementById('tamanho');
         const baseSelect = document.getElementById('base');
         const precoSpan = document.getElementById('preco');
         const form = document.querySelector('.formulario-personalizacao');
 
-        // Defina os preços por cor
         const precosCor = {
-            'vermelho': 20,
-            'preto': 20,
-            'dourado': 20,
-            'prata': 20,
-            'branco': 20,
-            'perso': 50
-        }
-
-        // Defina os preços base por tamanho
-        const precosTamanho = {
-            '10cm': 99.90,
-            '15cm': 139.90,
-            '20cm': 179.90
+            'vermelho': 20, 'preto': 20, 'dourado': 20,
+            'prata': 20, 'branco': 20, 'perso': 50
         };
 
-        // Preços adicionais para tipos de base
+        const precosTamanho = {
+            '10cm': 99.90, '15cm': 139.90, '20cm': 179.90
+        };
+
         const precosBase = {
-            'simples': 10,
-            'com-logo': 40,
-            'iluminada': 70
+            'simples': 10, 'com-logo': 40, 'iluminada': 70
         };
 
         function atualizarPreco() {
@@ -285,7 +276,6 @@
             const precoC = precosCor[cor] || 0;
 
             const total = precoT + precoB + precoC;
-
             precoSpan.textContent = total > 0 ? total.toFixed(2).replace('.', ',') : '—';
             return total;
         }
@@ -294,19 +284,84 @@
         baseSelect.addEventListener('change', atualizarPreco);
         corSelect.addEventListener('change', atualizarPreco);
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        // Botão "Adicionar ao carrinho"
+        document.querySelector('.modal-footer .btn-primary').addEventListener('click', async function () {
+            const cor = corSelect.value;
+            const tamanho = tamanhoSelect.value;
+            const base = baseSelect.value;
+            const gravacao = document.getElementById('gravacao').value;
+            const precoFinal = atualizarPreco();
 
-            const cor = corSelect.value || '—';
-            const tamanho = tamanhoSelect.value || '—';
-            const base = baseSelect.value || '—';
-            const gravacao = document.getElementById('gravacao').value || '—';
-            const precoFinal = atualizarPreco().toFixed(2).replace('.', ',');
+            // Validação mínima
+            if (!tamanho || tamanho === 'Selecione...' || !base || base === 'Selecione...' || !cor || cor === 'Selecione...') {
+                alert('Por favor, selecione o tamanho, a base e a cor antes de adicionar ao carrinho.');
+                return;
+            }
 
-            let resumo = `Resumo do Pedido:\nCor: ${cor}\nTamanho: ${tamanho}\nBase: ${base}\nGravação: ${gravacao}\nPreço Final: R$ ${precoFinal}\n\n Essa personalização já foi adicionada no carrinho!`;
+            if (precoFinal === 0) {
+                alert('Selecione as opções para calcular o preço.');
+                return;
+            }
 
-            alert(resumo); // Mostra um alerta com o resumo
+            // Monta nome descritivo
+            const nomeParts = [`Miniatura ${tamanho}`, cor, `base ${base}`];
+            if (gravacao) nomeParts.push(`"${gravacao}"`);
+            const nomeItem = `Personalizada — ${nomeParts.join(', ')}`;
+
+            // ID único baseado nas opções (para evitar duplicatas com configs iguais)
+            const idUnico = `perso-${tamanho}-${base}-${cor}-${(gravacao || 'semgravacao').replace(/\s/g, '_')}`;
+
+            try {
+                const response = await fetch(`${API_URL}/carrinho`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        id: idUnico,
+                        nome: nomeItem,
+                        marca: 'Personalização',
+                        preco: precoFinal,
+                        quantidade: 1,
+                        tipo: 'personalizacao'
+                    })
+                });
+
+                if (response.ok) {
+                    mostrarNotificacao(`✅ Miniatura personalizada adicionada ao carrinho!`);
+                } else {
+                    const erro = await response.json();
+                    alert('Erro ao adicionar: ' + (erro.error || 'Tente novamente.'));
+                }
+            } catch (error) {
+                console.error('Erro ao adicionar personalização:', error);
+                alert('Erro ao conectar com o servidor!');
+            }
         });
+
+        function mostrarNotificacao(mensagem) {
+            const anterior = document.querySelector('.notificacao-perso');
+            if (anterior) anterior.remove();
+
+            const notif = document.createElement('div');
+            notif.className = 'notificacao-perso';
+            notif.style.cssText = `
+                position: fixed; top: 80px; right: 20px;
+                background-color: #28a745; color: white;
+                padding: 15px 25px; border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+                z-index: 9999; font-size: 16px;
+                animation: slideIn 0.3s ease-out;
+            `;
+            notif.innerHTML = `${mensagem} &nbsp; <a href="/html/carrinho.html" style="color:white; font-weight:bold; text-decoration:underline;">Ver carrinho</a>`;
+            document.body.appendChild(notif);
+
+            setTimeout(() => { notif.remove(); }, 4000);
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn { from { transform: translateX(400px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 
