@@ -65,7 +65,7 @@ function renderizarCarrinho(itens){
                                 max="50"
                                 class="form-control"
                                 style="width: 80px; display: inline-block;"
-                                onchange="atualizarQuantidade(${item.id}, this.value)">
+                                onchange="atualizarQuantidade('${item.id}', this.value)">
                         </div>
                     </div>
                     <div style="margin-left: auto; margin-right: 20px; text-align: right;">
@@ -73,7 +73,7 @@ function renderizarCarrinho(itens){
                         <p style="font-size: 14px; color:rgba(255, 255, 255, 0.57);">
                             ${item.quantidade}x R$ ${item.preco.toFixed(2).replace('.', ',')}
                         </p>
-                        <button class="btn btn-danger btn-sm" onclick="removerDoCarrinho(${item.id})" style="margin-top: 10px;">
+                        <button class="btn btn-danger btn-sm" onclick="removerDoCarrinho('${item.id}')" style="margin-top: 10px;">
                             🗑️ Remover
                         </button>
                     </div>

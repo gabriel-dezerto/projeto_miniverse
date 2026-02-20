@@ -219,7 +219,9 @@ router.put('/carrinho/:id', (req, res) => {
     const { quantidade } = req.body;
     const carrinho = readJSON(carrinhoPath);
 
-    const item = carrinho.find((item) => item.id === parseInt(id));
+    // Suporta IDs numéricos (produtos) e string (planos/personalizações)
+    const parsedId = isNaN(id) ? id : parseInt(id);
+    const item = carrinho.find((item) => item.id === parsedId);
     if (!item) {
         return res.status(404).json({ error: 'Item não encontrado no carrinho' });
     }
@@ -233,7 +235,9 @@ router.delete('/carrinho/:id', (req, res) => {
     const { id } = req.params;
     let carrinho = readJSON(carrinhoPath);
 
-    const itemIndex = carrinho.findIndex((item) => item.id === parseInt(id));
+    // Suporta IDs numéricos (produtos) e string (planos/personalizações)
+    const parsedId = isNaN(id) ? id : parseInt(id);
+    const itemIndex = carrinho.findIndex((item) => item.id === parsedId);
     if (itemIndex === -1) {
         return res.status(404).json({ error: 'Item não encontrado no carrinho' });
     }
