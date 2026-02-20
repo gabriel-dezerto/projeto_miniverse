@@ -162,7 +162,7 @@
 
             <!-- Botão -->
             <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%; width: 130%;">
-                <button type="button" class="btn btn-primary"
+                <button type="button" id="btn-adicionar-carrinho" class="btn btn-primary"
                     style="width: 100%; margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 20%; border-radius: 60px; font-size: 2.5vh; margin-top: 2%;">Adicionar
                     ao carrinho</button>
             </div>
@@ -285,7 +285,7 @@
         corSelect.addEventListener('change', atualizarPreco);
 
         // Botão "Adicionar ao carrinho"
-        document.querySelector('.modal-footer .btn-primary').addEventListener('click', async function () {
+        document.getElementById('btn-adicionar-carrinho').addEventListener('click', async function () {
             const cor = corSelect.value;
             const tamanho = tamanhoSelect.value;
             const base = baseSelect.value;
