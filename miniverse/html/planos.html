@@ -34,7 +34,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2.5rem;
             width: 100%;
         }
 
@@ -89,10 +89,10 @@
 
         .text_desconto {
             font-size: clamp(0.75rem, 1.8vw, 0.875rem);
-            color: #fff;
-            background: #51A658;
-            border-radius: 20px;
-            padding: 4px 12px;
+            color: #1cbe7e;
+            background: transparent;
+            border-radius: 0;
+            padding: 4px 0;
             line-height: 1.6;
             margin-bottom: 0.75rem;
         }
@@ -150,17 +150,12 @@
                                     Marcas
                                 </a>
                                 <ul class="dropdown-menu dropmenu-marcas">
-                                    <li><a class="dropdown-item a_li_header"
-                                            href="/html/produtos.html#marvel">Marvel</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#marvel">Marvel</a></li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dc">DC</a></li>
-                                    <li><a class="dropdown-item a_li_header"
-                                            href="/html/produtos.html#dragonball">Dragon Ball</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#tlou">The Last of
-                                            Us</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star
-                                            Wars</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#seresmito">Seres
-                                            Mitológicos</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dragonball">Dragon Ball</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#tlou">The Last of Us</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star Wars</a></li>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#seresmito">Seres Mitológicos</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -210,19 +205,17 @@
         </div>
     </div>
 
-    <!-- Conteúdo principal -->
     <div class="content-wrap">
         <div class="container planos-section">
             <h1 class="text-center">Nossos planos</h1>
 
             <div class="planos-grid">
 
-                <!-- Plano Herói -->
                 <div class="plano-col">
                     <div class="card card_lancamento border-0">
                         <div class="card-body">
                             <img src="../images/espadaCruzada_planos.png" class="plano-img" alt="Ícone Herói">
-                            <h5 class="card-title">Herói</h5>
+                            <h2 class="card-title">Herói</h2>
                             <p class="text_desconto card-text">
                                 Uma miniatura pequena exclusiva por mês<br>
                                 Acesso antecipado a novos lançamentos
@@ -234,13 +227,11 @@
                     </div>
                 </div>
 
-                <!-- Plano Mestre Jedi -->
                 <div class="plano-col">
                     <div class="card card_lancamento border-0">
                         <div class="card-body">
-                            <img src="../images/sabresdeluzCruzados_planos.png" class="plano-img"
-                                alt="Ícone Mestre Jedi">
-                            <h5 class="card-title">Mestre Jedi</h5>
+                            <img src="../images/sabresdeluzCruzados_planos.png" class="plano-img" alt="Ícone Mestre Jedi">
+                            <h2 class="card-title">Mestre Jedi</h2>
                             <p class="text_desconto card-text">
                                 Uma miniatura média exclusiva por mês<br>
                                 Desconto de 10% em outras compras
@@ -252,12 +243,11 @@
                     </div>
                 </div>
 
-                <!-- Plano Lenda -->
                 <div class="plano-col">
                     <div class="card card_lancamento border-0">
                         <div class="card-body">
                             <img src="../images/coroa_planos.png" class="plano-img" alt="Ícone Lenda">
-                            <h5 class="card-title">Lenda</h5>
+                            <h2 class="card-title">Lenda</h2>
                             <p class="text_desconto card-text">
                                 Uma miniatura pequena exclusiva<br>
                                 Uma miniatura grande exclusiva<br>
@@ -278,8 +268,8 @@
             <div class="container py-4 py-md-5 px-4 px-md-3">
                 <div class="row">
                     <div class="col-lg-3 mb-3">
-                        <a class="d-inline-flex align-items-center mb-2 text-decoration-none" href="/html/index.html"
-                            aria-label="Bootstrap">
+                        <a class="d-inline-flex align-items-center mb-2 text-decoration-none"
+                            href="/html/index.html" aria-label="Bootstrap">
                             <img src="../images/logo_miniverse_minimalista.png" height="80" width="80">
                             <span class="fs-5 miniF">Miniverse</span>
                         </a>
@@ -338,7 +328,7 @@
                 </div>
             </div>
         </footer>
-    </div><!-- /.content-wrap -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
