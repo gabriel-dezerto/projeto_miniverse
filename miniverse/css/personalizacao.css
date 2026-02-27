@@ -121,6 +121,11 @@ body {
   letter-spacing: -1px;
 }
 
+.preco{
+  display:inline!important;
+  font-size: 1rem!important;
+}
+
 /* =========================
    BOTÃO PRINCIPAL
 ========================= */
