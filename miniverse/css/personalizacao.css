@@ -187,6 +187,14 @@ body {
   margin-top: 6px;
 }
 
+.mensagem-ajuda {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+  opacity: 1;   /* GARANTE QUE COMEÇA VISÍVEL */
+  transition: opacity 0.2s ease;
+}
+
 /* =========================
    PREÇO
 ========================= */
@@ -209,7 +217,7 @@ body {
 
 .preco {
   display: inline !important;
-  font-size: 1.5rem !important;
+  font-size: 2.2rem !important;
 }
 
 /* =========================
