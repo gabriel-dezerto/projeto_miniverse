@@ -2,7 +2,6 @@ body {
   background-color: #ffffff;
   margin: 0;
 
-  font-family: 'Ruda', sans-serif;
 }
 
 /* make footer sit at bottom when page is short without being fixed
@@ -35,6 +34,7 @@ body > .container {
   font-family: 'Ruda';
   src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
 }
+
 /* HEADER */
 .line {
   width: 100%;
@@ -44,9 +44,9 @@ body > .container {
 }
 
 .a_li_header {
+  font-family: 'Source Code Pro', monospace !important;
   color: aliceblue !important;
-  text-decoration: none;
-  /* Tira o sublinhado */
+  text-decoration: none;/* Tira o sublinhado */
   margin-right: 15px;
   transition: color 0.3s;
 }
@@ -72,6 +72,7 @@ body > .container {
 }
 
 .miniverse {
+  font-family: 'Bungee', sans-serif !important;
   color: aliceblue;
   font-size: 22px;
   margin-bottom: 5px;
@@ -362,19 +363,20 @@ body > .container {
 }
 
 .text_desconto{
-  font-size: 10px;
-  color: #51A658;
+  font-size: 12px;
+  color: #ffffff;
+  background: #51A658;
+  width: 120px;
+  border-radius: 20px;
 }
 
 /*Controles do slider de imagens*/
 .prev_button_img,
 .next_button_img {
   width: 50px;
-  height: 50px;
+  height: 300px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #000000;
-  border-radius: 300%;
 }
 
 /*Controles do slider de cards*/
@@ -384,8 +386,6 @@ body > .container {
   height: 37px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 300%;
   /* botão redondinho */
   padding: 10px;
 }
@@ -394,7 +394,7 @@ body > .container {
 .next_button-icon {
   width: 30px;
   height: 30px;
-  filter: invert(1);
+  /* filter: invert(1); */
   /* deixa o ícone branco se o fundo for escuro */
 }
 

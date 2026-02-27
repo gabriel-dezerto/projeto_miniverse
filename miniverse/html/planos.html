@@ -282,8 +282,8 @@
                 z-index: 9999; font-size: 16px;
                 animation: slideIn 0.3s ease-out;
             `;
-                notif.innerHTML = `${mensagem} &nbsp; <a href="/html/carrinho.html" style="color:white; font-weight:bold; text-decoration:underline;">Ver carrinho</a>`;
-                document.body.appendChild(notif);
+            notif.innerHTML = `${mensagem} &nbsp; `;
+            document.body.appendChild(notif);
 
                 setTimeout(() => { notif.remove(); }, 4000);
             }
