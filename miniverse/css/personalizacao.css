@@ -161,22 +161,34 @@ body {
 /* =========================
    RESUMO LATERAL
 ========================= */
+
+
 .resumo {
-  background: #063b22;
-  color: white;
-  padding: 50px 40px;
-  border-radius: 16px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+
+  border: 1px solid #eaeaea;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(28, 190, 126, 0.05);
+
   position: sticky;
-  top: 120px;
+  top: 120px; /* fica fixo ao rolar */
+
+  height: fit-content;
+  transition: all 0.3s ease;
 }
 
-.resumo h3 {
-  font-weight: 700;
-  margin-bottom: 40px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.resumo:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(28, 190, 126, 0.1);
 }
+
+
 
 /* =========================
    DESCRIÇÃO DA MINIATURA
@@ -214,20 +226,26 @@ body {
    PREÇO
 ========================= */
 .preco-box {
-  margin-bottom: 40px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #eaeaea;
 }
 
 .preco-box span {
-  display: block;
-  font-size: 0.85rem;
-  opacity: 0.9;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .preco-box strong {
-  font-size: 2.2rem;
-  font-weight: 900;
-  letter-spacing: -1px;
+  font-size: 1.5rem;
+  color: #096e46;
 }
 
 .preco {
@@ -240,29 +258,33 @@ body {
 ========================= */
 .btn-principal {
   width: 100%;
-  padding: 18px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 1rem;
+  padding: 15px;
+
+  border-radius: 50px;
+  border: 2px solid #096e46;
   background: #ffffff;
-  color: #111;
-  transition: 0.2s ease;
+  color: #096e46;
+
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .btn-principal:hover {
-  background: #008000;
-  color: white;
+  background: #075c3a;
+  color: #ffffff;
+}
+
+.btn-principal:active {
+  transform: scale(0.98);
 }
 
 /* =========================
    HOVER SUAVE NOS CARDS
 ========================= */
-.opcoes:hover {
-  transform: translateY(-3px);
-  transition: 0.3s ease;
-}
 
 /* =========================
    RESPONSIVIDADE
