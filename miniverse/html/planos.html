@@ -39,13 +39,16 @@
                                     Marcas
                                 </a>
                                 <ul class="dropdown-menu dropmenu-marcas">
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#marvel">Marvel</a></li>
+                                    <li><a class="dropdown-item a_li_header"
+                                            href="/html/produtos.html#marvel">Marvel</a></li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dc">DC</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dragonball">Dragon
+                                    <li><a class="dropdown-item a_li_header"
+                                            href="/html/produtos.html#dragonball">Dragon
                                             Ball</a></li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#tlou">The Last of
                                             Us</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star Wars</a>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star
+                                            Wars</a>
                                     </li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#seresmito">Seres
                                             Mitológicos</a></li>
@@ -98,173 +101,180 @@
         </div>
     </div>
 
+    <!-- main content wrapper ensures footer is pushed to bottom when page is short -->
+    <div class="content-wrap">
+        <div class="container" style="justify-content: center; display: flex;">
+            <div class="row  g-4 slider_cards text-center"
+                style="padding: 0%; width: 100%; justify-content: space-between;">
+                <div style="padding: 0%;">
+                    <h1 style="color: white; margin-top: 2%; margin-bottom: 1%;">Nossos planos</h1>
+                </div>
 
-    <div class="row justify-content-center g-4 slider_cards text-center" style="padding: 0%; width: 100%;">
-        <div style="padding: 0%;">
-            <h1 style="color: white; margin-top: 2%; margin-bottom: 1%;">Nossos planos</h1>
-        </div>
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3" style="width: 25%;">
-            <div class="card card_lancamento border-0 h-100">
-                <div class="card-body">
-                    <img src="../images/espadaCruzada_planos.png"
-                        style="background-color: #1e1e1e; height: 22%; margin-top: 4%; margin-bottom: 4%;" width="22%">
-                    <h5 class="card-title" style="font-size: 3.5vh;">Herói</h5>
-                    <p class="text_desconto card-text" style="font-size: 2vh; line-height: 2.3;">Uma miniatura pequena
-                        exclusiva por mês<br>Acesso antecipado a novos lançamentos</p>
-                    <p class="card-text" style="font-size: 2.5vh; margin-top: 120px; margin-bottom: 0%;">R$ 149,90/mês</p>
-                    <button onclick="assinarPlano('plano-heroi', 'Plano Herói', 149.90)"
-                        class="btn btn-outline-success button" style="margin-top: 2%;">Assinar</button>
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card_lancamento border-0 h-100">
+                        <div class="card-body">
+                            <img src="../images/espadaCruzada_planos.png" class="plano-img">
+                            <h5 class="card-title" style="font-size: 3.5vh;">Herói</h5>
+                            <p class="text_desconto card-text" style="font-size: 2vh; line-height: 2.3;">Uma miniatura
+                                pequena
+                                exclusiva por mês<br>Acesso antecipado a novos lançamentos</p>
+                            <p class="card-text price">R$ 149,90/mês</p>
+                            <button onclick="assinarPlano('plano-heroi', 'Plano Herói', 149.90)"
+                                class="btn btn-outline-success button" style="margin-top: 2%;">Assinar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card_lancamento border-0 h-100">
+                        <div class="card-body">
+                            <img src="../images/sabresdeluzCruzados_planos.png" class="plano-img">
+                            <h5 class="card-title" style="font-size: 3.5vh;">Mestre Jedi</h5>
+                            <p class="text_desconto card-text"
+                                style="font-size: 2vh; margin-top: 5%; line-height: 2.3;">Uma miniatura média
+                                exclusiva por mês <br> Desconto de 10% em outras compras</p>
+                            <p class="card-text price">R$ 249,90/mês</p>
+                            <button onclick="assinarPlano('plano-mestre-jedi', 'Plano Mestre Jedi', 249.90)"
+                                class="btn btn-outline-success button" style="margin: 2%;">Assinar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card_lancamento border-0 h-100">
+                        <div class="card-body">
+                            <img src="../images/coroa_planos.png" class="plano-img">
+                            <h5 class="card-title" style="font-size: 3.5vh;">Lenda</h5>
+                            <p class="text_desconto card-text"
+                                style="font-size: 2vh; margin-top: 5%; line-height: 2.3;">Uma miniatura pequena
+                                exclusiva <br>Uma miniatura grande exclusiva <br> Detalhamento especial, base
+                                customizada <br>Frete
+                                grátis + 15% de desconto em todo o site</p>
+                            <p class="card-text price">R$ 449,90/mês</p>
+                            <button onclick="assinarPlano('plano-lenda', 'Plano Lenda', 449.90)"
+                                class="btn btn-outline-success button" style="margin: 2%;">Assinar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- /.content-wrap -->
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3" style="width: 25%;">
-            <div class="card card_lancamento border-0 h-100">
-                <div class="card-body">
-                    <img src="../images/sabresdeluzCruzados_planos.png"
-                        style="background-color: #1e1e1e; height: 26%; margin-top: 2%; margin-bottom: 2%;" width="26%">
-                    <h5 class="card-title" style="font-size: 3.5vh;">Mestre Jedi</h5>
-                    <p class="text_desconto card-text" style="font-size: 2vh; margin-top: 5%; line-height: 2.3;">Uma miniatura média
-                        exclusiva por mês <br> Desconto de 10% em outras compras</p>
-                    <p class="card-text" style="font-size: 2.5vh; margin-bottom: 0%; margin-top: 106px;">R$ 249,90/mês</p>
-                    <button onclick="assinarPlano('plano-mestre-jedi', 'Plano Mestre Jedi', 249.90)"
-                        class="btn btn-outline-success button" style="margin: 2%;">Assinar</button>
+        <footer class="bd-footer py-4 py-md-5">
+            <div class="container py-4 py-md-5 px-4 px-md-3">
+                <div class="row">
+                    <div class="col-lg-3 mb-3"> <a class="d-inline-flex align-items-center mb-2 text-decoration-none"
+                            href="/html/index.html" aria-label="Bootstrap"> <img
+                                src="../images/logo_miniverse_minimalista.png" height="80" width="80">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                fill="currentColor"></path>
+                            </svg> <span class="fs-5 miniF">Miniverse</span>
+                        </a>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2" style="font-size: 20px;">
+                                <i>Seu universo em miniatura.</i>
+                            </li>
+                            <li class="mb-2"></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="marvel">Marvel</h5><br>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/html/marvel/homemAranha.html">Homem-Aranha</a></li>
+                            <li class="mb-2"><a href="/html/marvel/homemFerro.html">Homem de Ferro</a></li>
+                            <li class="mb-2"><a href="/html/marvel/capitaoAmerica.html">Capitão América</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="dc">DC</h5><br>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/html/dc/batman.html">Batman</a></li>
+                            <li class="mb-2"><a href="/html/dc/superman.html">Superman</a></li>
+                            <li class="mb-2"><a href="/html/dc/mulherMaravilha.html">Mulher-Maravilha</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="db">Dragon Ball</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"> <a href="/html/dragonBall/goku.html" rel="noopener">Goku</a> </li>
+                            <li class="mb-2"> <a href="/html/dragonBall/vegeta.html" rel="noopener">Vegeta</a></li>
+                            <li class="mb-2"><a href="/html/dragonBall/piccolo.html" rel="noopener">Piccolo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="tlou">The Last of Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"> <a href="/html/tlou/joel.html" rel="noopener">Joel</a> </li>
+                            <li class="mb-2"> <a href="/html/tlou/ellie.html" rel="noopener">Ellie</a> </li>
+                            <li class="mb-2"> <a href="/html/tlou/abby.html" rel="noopener">Abby</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="star">Star Wars</h5><br>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"> <a href="/html/starWars/darthVader.html" rel="noopener">Darth Vader</a>
+                            </li>
+                            <li class="mb-2"> <a href="/html/starWars/yoda.html" rel="noopener">Yoda</a> </li>
+                            <li class="mb-2"> <a href="/html/starWars/leia.html" rel="noopener">Leia</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-1 mb-2">
+                        <h5 class="mito">Seres Mitológicos</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"> <a href="/html/seresMito/zeus.html" rel="noopener">Zeus</a> </li>
+                            <li class="mb-2"> <a href="/html/seresMito/minotauro.html" rel="noopener">Minotauro</a>
+                            </li>
+                            <li class="mb-2"> <a href="/html/seresMito/medusa.html" rel="noopener">Medusa</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3" style="width: 25%;">
-            <div class="card card_lancamento border-0 h-100">
-                <div class="card-body">
-                    <img src="../images/coroa_planos.png"
-                        style="background-color: #1e1e1e; height: 26%; margin-top: 2%; margin-bottom: 2%;" width="26%">
-                    <h5 class="card-title" style="font-size: 3.5vh;">Lenda</h5>
-                    <p class="text_desconto card-text" style="font-size: 2vh; margin-top: 5%; line-height: 2.3;">Uma miniatura pequena
-                        exclusiva <br>Uma miniatura grande exclusiva <br> Detalhamento especial, base customizada <br>Frete
-                        grátis + 15% de desconto em todo o site</p>
-                    <p class="card-text" style="font-size: 2.5vh; margin-top: 22px; margin-bottom: 0%;">R$ 449,90/mês</p>
-                    <button onclick="assinarPlano('plano-lenda', 'Plano Lenda', 449.90)"
-                        class="btn btn-outline-success button" style="margin: 2%;">Assinar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+        </footer>
 
 
-    <footer class="bd-footer py-4 py-md-5" style="margin-top: 200px;">
-        <div class="container py-4 py-md-5 px-4 px-md-3">
-            <div class="row">
-                <div class="col-lg-3 mb-3"> <a class="d-inline-flex align-items-center mb-2 text-decoration-none"
-                        href="/html/index.html" aria-label="Bootstrap"> <img src="../images/logo_miniverse_minimalista.png"
-                            height="80" width="80">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-                            fill="currentColor"></path>
-                        </svg> <span class="fs-5 miniF">Miniverse</span>
-                    </a>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2" style="font-size: 20px;">
-                            <i>Seu universo em miniatura.</i>
-                        </li>
-                        <li class="mb-2"></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="marvel">Marvel</h5><br>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/html/marvel/homemAranha.html">Homem-Aranha</a></li>
-                        <li class="mb-2"><a href="/html/marvel/homemFerro.html">Homem de Ferro</a></li>
-                        <li class="mb-2"><a href="/html/marvel/capitaoAmerica.html">Capitão América</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="dc">DC</h5><br>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/html/dc/batman.html">Batman</a></li>
-                        <li class="mb-2"><a href="/html/dc/superman.html">Superman</a></li>
-                        <li class="mb-2"><a href="/html/dc/mulherMaravilha.html">Mulher-Maravilha</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="db">Dragon Ball</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"> <a href="/html/dragonBall/goku.html" rel="noopener">Goku</a> </li>
-                        <li class="mb-2"> <a href="/html/dragonBall/vegeta.html" rel="noopener">Vegeta</a></li>
-                        <li class="mb-2"><a href="/html/dragonBall/piccolo.html" rel="noopener">Piccolo</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="tlou">The Last of Us</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"> <a href="/html/tlou/joel.html" rel="noopener">Joel</a> </li>
-                        <li class="mb-2"> <a href="/html/tlou/ellie.html" rel="noopener">Ellie</a> </li>
-                        <li class="mb-2"> <a href="/html/tlou/abby.html" rel="noopener">Abby</a> </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="star">Star Wars</h5><br>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"> <a href="/html/starWars/darthVader.html" rel="noopener">Darth Vader</a> </li>
-                        <li class="mb-2"> <a href="/html/starWars/yoda.html" rel="noopener">Yoda</a> </li>
-                        <li class="mb-2"> <a href="/html/starWars/leia.html" rel="noopener">Leia</a> </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-1 mb-2">
-                    <h5 class="mito">Seres Mitológicos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"> <a href="/html/seresMito/zeus.html" rel="noopener">Zeus</a> </li>
-                        <li class="mb-2"> <a href="/html/seresMito/minotauro.html" rel="noopener">Minotauro</a> </li>
-                        <li class="mb-2"> <a href="/html/seresMito/medusa.html" rel="noopener">Medusa</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
+        <script>
+            const API_URL = 'http://localhost:3000/api';
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+            async function assinarPlano(id, nome, preco) {
+                try {
+                    const response = await fetch(`${API_URL}/carrinho`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            id,
+                            nome,
+                            marca: 'Assinatura',
+                            preco,
+                            quantidade: 1,
+                            tipo: 'plano'
+                        })
+                    });
 
-    <script>
-        const API_URL = 'http://localhost:3000/api';
-
-        async function assinarPlano(id, nome, preco) {
-            try {
-                const response = await fetch(`${API_URL}/carrinho`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        id,
-                        nome,
-                        marca: 'Assinatura',
-                        preco,
-                        quantidade: 1,
-                        tipo: 'plano'
-                    })
-                });
-
-                if (response.ok) {
-                    mostrarNotificacao(`✅ ${nome} adicionado ao carrinho!`);
-                } else {
-                    const erro = await response.json();
-                    alert('Erro ao adicionar plano: ' + (erro.error || 'Tente novamente.'));
+                    if (response.ok) {
+                        mostrarNotificacao(`✅ ${nome} adicionado ao carrinho!`);
+                    } else {
+                        const erro = await response.json();
+                        alert('Erro ao adicionar plano: ' + (erro.error || 'Tente novamente.'));
+                    }
+                } catch (error) {
+                    console.error('Erro ao assinar plano:', error);
+                    alert('Erro ao conectar com o servidor!');
                 }
-            } catch (error) {
-                console.error('Erro ao assinar plano:', error);
-                alert('Erro ao conectar com o servidor!');
             }
-        }
 
-        function mostrarNotificacao(mensagem) {
-            const anterior = document.querySelector('.notificacao-plano');
-            if (anterior) anterior.remove();
+            function mostrarNotificacao(mensagem) {
+                const anterior = document.querySelector('.notificacao-plano');
+                if (anterior) anterior.remove();
 
-            const notif = document.createElement('div');
-            notif.className = 'notificacao-plano';
-            notif.style.cssText = `
+                const notif = document.createElement('div');
+                notif.className = 'notificacao-plano';
+                notif.style.cssText = `
                 position: fixed; top: 80px; right: 20px;
                 background-color: #28a745; color: white;
                 padding: 15px 25px; border-radius: 5px;
@@ -272,18 +282,18 @@
                 z-index: 9999; font-size: 16px;
                 animation: slideIn 0.3s ease-out;
             `;
-            notif.innerHTML = `${mensagem} &nbsp; <a href="/html/carrinho.html" style="color:white; font-weight:bold; text-decoration:underline;">Ver carrinho</a>`;
-            document.body.appendChild(notif);
+                notif.innerHTML = `${mensagem} &nbsp; <a href="/html/carrinho.html" style="color:white; font-weight:bold; text-decoration:underline;">Ver carrinho</a>`;
+                document.body.appendChild(notif);
 
-            setTimeout(() => { notif.remove(); }, 4000);
-        }
+                setTimeout(() => { notif.remove(); }, 4000);
+            }
 
-        const style = document.createElement('style');
-        style.textContent = `
+            const style = document.createElement('style');
+            style.textContent = `
             @keyframes slideIn { from { transform: translateX(400px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
         `;
-        document.head.appendChild(style);
-    </script>
+            document.head.appendChild(style);
+        </script>
 </body>
 
 </html>
