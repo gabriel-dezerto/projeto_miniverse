@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 3003,
+        "nome": "Piccolo",
+        "marca": "Dragon Ball",
+        "preco": 499.99,
+        "quantidade": 1
+    }
+]

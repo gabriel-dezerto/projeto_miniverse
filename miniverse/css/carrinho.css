@@ -124,7 +124,7 @@ body {
 }
 
 .titulo-c h1 {
-    color: #ffffff;
+    color: #000000;
     font-size: 5.5vh;
     margin-bottom: 2%;
 }
@@ -155,7 +155,7 @@ body {
 
 
 .total-c {
-    background-color: #ffffff;
+    background-color: #063b22;
     width: 27%;
     border: solid #0000 2px;
     border-radius: 5%;
@@ -171,11 +171,13 @@ body {
 
 .texto-total {
     font-size: 40px;
+    color: #ffffff;
 }
 
 .preco-total {
     font-size: 40px;
     margin-left: auto;
+    color: #ffffff;
 }
 
 
@@ -256,18 +258,21 @@ footer a:hover {
 .botao-comprar-c {
     justify-content: center;
     display: flex;
-    margin-top: 22%;
+    margin-top: 20%;
+    margin-bottom: 5%;
     height: 17%;
 }
 
 .botao-comprar-c button {
     width: 65%;
     font-size: 2.8vh;
-    background-color: #198754;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .botao-comprar-c button:hover {
     background-color: #ffffff;
-    color: #198754;
+    color: #000000;
+    scale: 1.05;
+    transition: all 0.3s ease;
 }
