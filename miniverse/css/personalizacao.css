@@ -112,9 +112,23 @@ body {
 ========================= */
 .opcoes {
   background: #ffffff;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+
+  border: 1px solid #f0f0f0;
+
+  transition: all 0.3s ease;
+}
+
+.opcoes:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .campo {
@@ -191,7 +205,8 @@ body {
   font-size: 0.85rem;
   color: #666;
   margin-top: 8px;
-  opacity: 1;   /* GARANTE QUE COMEÇA VISÍVEL */
+  opacity: 1;
+  /* GARANTE QUE COMEÇA VISÍVEL */
   transition: opacity 0.2s ease;
 }
 
@@ -205,7 +220,7 @@ body {
 .preco-box span {
   display: block;
   font-size: 0.85rem;
-  opacity: 0.6;
+  opacity: 0.9;
   margin-bottom: 5px;
 }
 
@@ -357,4 +372,9 @@ footer a:hover {
   footer h5 {
     font-size: 16px;
   }
+}
+
+.miniF {
+  margin-bottom: 10px;
+  font-family: 'Bungee', sans-serif !important;
 }
