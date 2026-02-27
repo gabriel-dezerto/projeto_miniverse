@@ -100,73 +100,82 @@
         </div>
     </div>
 
-    <main class="container personalizacao">
-        <form class="formulario-personalizacao">
-            <h2>Detalhes da Personalização</h2>
-            <p style="margin-bottom: 2%;">Escolha abaixo as opções e monte sua miniatura exclusiva.</p>
+    <main class="personalizacao-layout">
+        <div class="container">
 
-            <!-- Cor -->
-            <div class="mb-4">
-                <label for="cor" class="form-label"><strong>Cor principal</strong></label>
-                <select class="form-select" id="cor">
-                    <option selected class="option">Selecione...</option>
-                    <option value="vermelho">Vermelho</option>
-                    <option value="preto">Preto</option>
-                    <option value="dourado">Dourado</option>
-                    <option value="prata">Prata</option>
-                    <option value="branco">Branco</option>
-                    <option value="perso">Cor Identica a Miniatura</option>
-                </select>
+            <div class="topo-perso">
+                <h1>Personalize sua Miniatura</h1>
+                <p>Configure os detalhes e crie uma peça exclusiva.</p>
             </div>
 
-            <!-- Tamanho -->
-            <div class="mb-4">
-                <label for="tamanho" class="form-label"><strong>Tamanho da Miniatura</strong></label>
-                <select class="form-select" id="tamanho">
-                    <option selected>Selecione...</option>
-                    <option value="10cm">10 cm</option>
-                    <option value="15cm">15 cm</option>
-                    <option value="20cm">20 cm</option>
-                </select>
-            </div>
+            <div class="grid-perso">
 
-            <!-- Tipo de Base -->
-            <div class="mb-4">
-                <label for="base" class="form-label"><strong>Tipo de Base</strong></label>
-                <select class="form-select" id="base">
-                    <option selected>Selecione...</option>
-                    <option value="simples">Simples</option>
-                    <option value="com-logo">Com Logo</option>
-                    <option value="iluminada">Iluminada</option>
-                </select>
-            </div>
+                <!-- LADO ESQUERDO -->
+                <div class="opcoes">
 
-            <!-- Gravação personalizada -->
-            <div class="mb-4 div-errada">
-                <label for="gravacao" class="form-label"><strong>Gravação personalizada</strong> (opcional)</label>
-                <input type="text" id="gravacao" class="form-control" maxlength="30"
-                    placeholder="Ex: 'Herói da Galáxia' ou seu nome">
-            </div>
+                    <div class="campo">
+                        <label>Cor Principal</label>
+                        <select class="form-select" id="cor">
+                            <option selected>Selecione...</option>
+                            <option value="vermelho">Vermelho</option>
+                            <option value="preto">Preto</option>
+                            <option value="dourado">Dourado</option>
+                            <option value="prata">Prata</option>
+                            <option value="branco">Branco</option>
+                            <option value="perso">Cor Idêntica à Miniatura</option>
+                        </select>
+                    </div>
 
-            <!-- Upload de imagem -->
-            <div class="mb-4">
-                <label for="imagem" class="form-label"><strong>Imagem de referência</strong> (opcional)</label>
-                <input type="file" id="imagem" class="form-control">
-            </div>
+                    <div class="campo">
+                        <label>Tamanho</label>
+                        <select class="form-select" id="tamanho">
+                            <option selected>Selecione...</option>
+                            <option value="10cm">10 cm</option>
+                            <option value="15cm">15 cm</option>
+                            <option value="20cm">20 cm</option>
+                        </select>
+                    </div>
 
-            <!-- Preço estimado -->
-            <div class="preco mb-4" style="margin-top: 1%;">
-                <p style="margin-bottom: 0%; font-size: 3vh;"><strong>Valor estimado:</strong> R$ <span
-                        id="preco">0</span></p>
-            </div>
+                    <div class="campo">
+                        <label>Base</label>
+                        <select class="form-select" id="base">
+                            <option selected>Selecione...</option>
+                            <option value="simples">Simples</option>
+                            <option value="com-logo">Com Logo</option>
+                            <option value="iluminada">Iluminada</option>
+                        </select>
+                    </div>
 
-            <!-- Botão -->
-            <div class="modal-footer" style="border-top: none; padding-bottom: 0%; padding-top: 0%; width: 130%;">
-                <button type="button" id="btn-adicionar-carrinho" class="btn btn-primary"
-                    style="width: 100%; margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 20%; border-radius: 60px; font-size: 2.5vh; margin-top: 2%;">Adicionar
-                    ao carrinho</button>
+                    <div class="campo">
+                        <label>Gravação</label>
+                        <input type="text" id="gravacao" class="form-control" placeholder="Ex: Herói da Galáxia">
+                    </div>
+
+                    <div class="campo">
+                        <label>Imagem de referência</label>
+                        <input type="file" id="imagem" class="form-control">
+                    </div>
+
+                </div>
+
+                <!-- LADO DIREITO -->
+                <div class="resumo">
+
+                    <h3>Resumo</h3>
+
+                    <div class="preco-box">
+                        <span>Valor estimado</span>
+                        <strong>R$ <span id="preco">0</span></strong>
+                    </div>
+
+                    <button type="button" id="btn-adicionar-carrinho" class="btn-principal">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
             </div>
-        </form>
+        </div>
     </main>
 
     <footer class="bd-footer py-4 py-md-5" style="margin-top: 200px;">

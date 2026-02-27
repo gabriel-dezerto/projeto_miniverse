@@ -9,6 +9,12 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" type="imagex/png" href="../images/logo_miniverse_minimalista.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -39,13 +45,16 @@
                                     Marcas
                                 </a>
                                 <ul class="dropdown-menu dropmenu-marcas">
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#marvel">Marvel</a></li>
+                                    <li><a class="dropdown-item a_li_header"
+                                            href="/html/produtos.html#marvel">Marvel</a></li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dc">DC</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#dragonball">Dragon
+                                    <li><a class="dropdown-item a_li_header"
+                                            href="/html/produtos.html#dragonball">Dragon
                                             Ball</a></li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#tlou">The Last of
                                             Us</a></li>
-                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star Wars</a>
+                                    <li><a class="dropdown-item a_li_header" href="/html/produtos.html#starwars">Star
+                                            Wars</a>
                                     </li>
                                     <li><a class="dropdown-item a_li_header" href="/html/produtos.html#seresmito">Seres
                                             Mitológicos</a></li>
@@ -194,9 +203,11 @@
                 <div class="card card_lancamento border-0 h-100">
                     <img src="../images/produtos_marvel/HomemAranha.png" class="card-img-top" alt="Homem de Ferro">
                     <div class="card-body">
-                        <h5 class="card-title">Homem-Aranha</h5>
-                        <p class="card-text">R$ 449,90</p>
-                        <p class="text_desconto card-text">13% de desconto</p>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <h5 class="card-title">Homem-Aranha</h5>
+                            <p class="card-text">R$ 449,90</p>
+                            <p class="text_desconto card-text">13% de desconto</p>
+                        </div>
                         <a href="/html/marvel/homemAranha.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
@@ -206,9 +217,11 @@
                 <div class="card card_lancamento border-0 h-100">
                     <img src="../images/produtos_tlou/Abby.png" class="card-img-top" alt="Joel">
                     <div class="card-body">
-                        <h5 class="card-title">Abby</h5>
-                        <p class="card-text">R$ 419,90</p>
-                        <p class="text_desconto card-text">16% de desconto</p>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <h5 class="card-title">Abby</h5>
+                            <p class="card-text">R$ 419,90</p>
+                            <p class="text_desconto card-text">16% de desconto</p>
+                        </div>
                         <a href="/html/tlou/abby.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
@@ -218,9 +231,11 @@
                 <div class="card card_lancamento border-0 h-100">
                     <img src="../images/produtos_dragonBall/Piccolo.png" class="card-img-top" alt="Piccolo">
                     <div class="card-body">
-                        <h5 class="card-title">Piccolo</h5>
-                        <p class="card-text">R$ 429,90</p>
-                        <p class="text_desconto card-text">14% de desconto</p>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <h5 class="card-title">Piccolo</h5>
+                            <p class="card-text">R$ 429,90</p>
+                            <p class="text_desconto card-text">14% de desconto</p>
+                        </div>
                         <a href="/html/dragonBall/piccolo.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
@@ -230,9 +245,11 @@
                 <div class="card card_lancamento border-0 h-100">
                     <img src="../images/produtos_starWars/Leia.png" class="card-img-top" alt="Yoda">
                     <div class="card-body">
-                        <h5 class="card-title">Leia</h5>
-                        <p class="card-text">R$ 429,90</p>
-                        <p class="text_desconto card-text">14% de desconto</p>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <h5 class="card-title">Leia</h5>
+                            <p class="card-text">R$ 429,90</p>
+                            <p class="text_desconto card-text">14% de desconto</p>
+                        </div>
                         <a href="/html/starWars/leia.html" class="btn btn-outline-success button">Ver miniatura</a>
                     </div>
                 </div>
@@ -243,7 +260,8 @@
 
     <!--Produtos que estão em promoção no site em um slider-->
     <div class="container my-5">
-        <h1 class="text-center text-light mb-3" style="color: rgb(0, 97, 16)!important; font-weight: 700;">Promoções</h1>
+        <h1 class="text-center text-light mb-3" style="color: rgb(0, 97, 16)!important; font-weight: 700;">Promoções
+        </h1>
         <hr class="mx-auto mb-4" style="width: 150px; border-top: 2px solid black;">
 
         <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -256,9 +274,11 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_marvel/HomemAranha.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Homem-Aranha</h5>
-                                    <p class="card-text">R$ 449,90</p>
-                                    <p class="text_desconto card-text">13% de desconto</p>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Homem-Aranha</h5>
+                                        <p class="card-text">R$ 449,90</p>
+                                        <p class="text_desconto card-text">13% de desconto</p>
+                                    </div>
                                     <a href="html/marvel/homemAranha.html" class="btn btn-outline-success button">Ver
                                         miniatura</a>
                                 </div>
@@ -269,10 +289,13 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_dragonBall/Piccolo.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Piccolo</h5>
-                                    <p class="card-text">R$ 429,90</p>
-                                    <p class="text_desconto card-text">14% de desconto</p>
-                                    <a href="html/dragonBall/piccolo.html" class="btn btn-outline-success button">Ver miniatura</a>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Piccolo</h5>
+                                        <p class="card-text">R$ 429,90</p>
+                                        <p class="text_desconto card-text">14% de desconto</p>
+                                    </div>
+                                    <a href="html/dragonBall/piccolo.html" class="btn btn-outline-success button">Ver
+                                        miniatura</a>
                                 </div>
                             </div>
                         </div>
@@ -281,10 +304,13 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_starWars/Leia.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Leia</h5>
-                                    <p class="card-text">R$ 429,90</p>
-                                    <p class="text_desconto card-text">14% de desconto</p>
-                                    <a href="html/starWars/leia.html" class="btn btn-outline-success button">Ver miniatura</a>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Leia</h5>
+                                        <p class="card-text">R$ 429,90</p>
+                                        <p class="text_desconto card-text">14% de desconto</p>
+                                    </div>
+                                    <a href="html/starWars/leia.html" class="btn btn-outline-success button">Ver
+                                        miniatura</a>
                                 </div>
                             </div>
                         </div>
@@ -298,10 +324,13 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_tlou/Abby.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Abby</h5>
-                                    <p class="card-text">R$ 419,90</p>
-                                    <p class="text_desconto card-text">16% de desconto</p>
-                                    <a href="html/tlou/abby.html" class="btn btn-outline-success button">Ver miniatura</a>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Abby</h5>
+                                        <p class="card-text">R$ 419,90</p>
+                                        <p class="text_desconto card-text">16% de desconto</p>
+                                    </div>
+                                    <a href="html/tlou/abby.html" class="btn btn-outline-success button">Ver
+                                        miniatura</a>
                                 </div>
                             </div>
                         </div>
@@ -310,10 +339,13 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_dc/Batman.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Batman</h5>
-                                    <p class="card-text">R$ 489,90</p>
-                                    <p class="text_desconto card-text">14% de desconto</p>
-                                    <a href="html/dc/batman.html" class="btn btn-outline-success button">Ver miniatura</a>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Batman</h5>
+                                        <p class="card-text">R$ 489,90</p>
+                                        <p class="text_desconto card-text">14% de desconto</p>
+                                    </div>
+                                    <a href="html/dc/batman.html" class="btn btn-outline-success button">Ver
+                                        miniatura</a>
                                 </div>
                             </div>
                         </div>
@@ -322,10 +354,13 @@
                             <div class="card card_lancamento border-0 h-100">
                                 <img src="../images/produtos_seresMito/Medusa.png" class="card-img-top" alt="Yoda">
                                 <div class="card-body">
-                                    <h5 class="card-title">Medusa</h5>
-                                    <p class="card-text">R$ 459,90</p>
-                                    <p class="text_desconto card-text">15% de desconto</p>
-                                    <a href="html/seresMito/medusa.html" class="btn btn-outline-success button">Ver miniatura</a>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Medusa</h5>
+                                        <p class="card-text">R$ 459,90</p>
+                                        <p class="text_desconto card-text">15% de desconto</p>
+                                    </div>
+                                    <a href="html/seresMito/medusa.html" class="btn btn-outline-success button">Ver
+                                        miniatura</a>
                                 </div>
                             </div>
                         </div>
