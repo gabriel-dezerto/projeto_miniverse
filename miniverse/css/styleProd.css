@@ -8,7 +8,7 @@ body {
   margin: 0;
   background-color: #001d2b;
   color: aliceblue;
-  font-family: 'Ruda', sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
 @font-face {
@@ -25,9 +25,9 @@ body {
 }
 
 .a_li_header {
+  font-family: 'Source Code Pro', monospace !important;
   color: aliceblue !important;
-  text-decoration: none;
-  /* Tira o sublinhado */
+  text-decoration: none;/* Tira o sublinhado */
   margin-right: 15px;
   transition: color 0.3s;
 }
@@ -70,6 +70,7 @@ body {
 }
 
 .miniverse {
+  font-family: 'Bungee', sans-serif !important;
   color: aliceblue;
   font-size: 22px;
   margin-bottom: 5px;

@@ -1,6 +1,7 @@
 body {
-    background-color: #001d2b;
+    background-color: #ffffff;
     margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /* HEADER */
@@ -11,11 +12,11 @@ body {
 }
 
 .a_li_header {
-    color: aliceblue !important;
-    text-decoration: none;
-    /* Tira o sublinhado */
-    margin-right: 15px;
-    transition: color 0.3s;
+  font-family: 'Source Code Pro', monospace !important;
+  color: aliceblue !important;
+  text-decoration: none;/* Tira o sublinhado */
+  margin-right: 15px;
+  transition: color 0.3s;
 }
 
 .a_li_header:hover {
@@ -39,9 +40,10 @@ body {
 }
 
 .miniverse {
-    color: aliceblue;
-    font-size: 22px;
-    margin-bottom: 5px;
+  font-family: 'Bungee', sans-serif !important;
+  color: aliceblue;
+  font-size: 22px;
+  margin-bottom: 5px;
 }
 
 /* Hamburguer do menu */

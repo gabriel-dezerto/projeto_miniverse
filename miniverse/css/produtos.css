@@ -1,12 +1,7 @@
 body {
-  background-color: #001d2b;
+  background-color: #ffffff;
   margin: 0;
-  font-family: 'Ruda', sans-serif;
-}
-
-@font-face {
-  font-family: 'Ruda';
-  src: url(../css/fonts/Ruda-VariableFont_wght.ttf) format('truetype');
+  font-family: 'Josefin Sans', sans-serif;
 }
 /* HEADER */
 .line {
@@ -17,9 +12,9 @@ body {
 }
 
 .a_li_header {
+  font-family: 'Source Code Pro', monospace !important;
   color: aliceblue !important;
-  text-decoration: none;
-  /* Tira o sublinhado */
+  text-decoration: none;/* Tira o sublinhado */
   margin-right: 15px;
   transition: color 0.3s;
 }
@@ -45,6 +40,7 @@ body {
 }
 
 .miniverse {
+  font-family: 'Bungee', sans-serif !important;
   color: aliceblue;
   font-size: 22px;
   margin-bottom: 5px;
