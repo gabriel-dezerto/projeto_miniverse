@@ -14,7 +14,7 @@ body {
 .a_li_header {
   font-family: 'Source Code Pro', monospace !important;
   color: aliceblue !important;
-  text-decoration: none;/* Tira o sublinhado */
+  text-decoration: none;
   margin-right: 15px;
   transition: color 0.3s;
 }
@@ -31,7 +31,6 @@ body {
 .dropdown-item.a_li_header:hover {
     color: #00ff99 !important;
     background-color: rgba(255, 255, 255, 0.1) !important;
-    /* leve destaque */
 }
 
 .dropmenu-marcas {
@@ -46,29 +45,22 @@ body {
   margin-bottom: 5px;
 }
 
-/* Hamburguer do menu */
 .navbar-toggler {
     border-color: #1cbe7e;
-    /* muda a cor da borda */
     background-color: transparent;
 }
 
-/* Cor dos "risquinhos" do ícone */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/*Principal da Home*/
 .div_diferencial_site {
     background-color: aqua;
     border-radius: 30px;
-
     margin-left: auto;
     margin-right: auto;
-
     width: 300px;
     height: 400px;
-
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -76,7 +68,6 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     transform: translateY(-5px);
 }
-
 
 .card_lancamento {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -99,13 +90,10 @@ body {
 .div_marcas {
     background-color: aquamarine;
     border-radius: 40px;
-
     margin-left: auto;
     margin-right: auto;
-
     width: 150px;
     height: 150px;
-
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -155,8 +143,6 @@ body {
     font-size: 4.vh;
 }
 
-
-
 .total-c {
     background-color: #063b22;
     width: 27%;
@@ -183,8 +169,6 @@ body {
     color: #ffffff;
 }
 
-
-
 .conteudo-c {
     display: flex;
     width: 100%;
@@ -203,8 +187,6 @@ body {
 }
 
 
-
-
 /* FOOTER */
 footer {
     background-color: black;
@@ -212,24 +194,19 @@ footer {
     padding: 40px 0;
 }
 
-/* Linha principal do footer */
 footer .row {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 80px;
-    /* espaço entre colunas */
     flex-wrap: nowrap;
-    /* mantém tudo em uma linha */
     text-align: left;
 }
 
-/* Cada coluna (ex: Marvel, DC...) */
 footer .col {
     min-width: 150px;
 }
 
-/* Títulos das colunas */
 footer h5 {
     margin-bottom: 15px;
     font-size: 18px;
@@ -279,4 +256,149 @@ footer a:hover {
     color: #000000;
     scale: 1.05;
     transition: all 0.3s ease;
+}
+
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* Tablet (até 992px) */
+@media (max-width: 992px) {
+    .container-c {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .conteudo-c {
+        flex-direction: column;
+    }
+
+    .produtos-c {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .total-c {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+        border-radius: 15px;
+        padding: 4% 5%;
+    }
+
+    .texto-total {
+        font-size: 30px;
+    }
+
+    .preco-total {
+        font-size: 30px;
+    }
+
+    .botao-comprar-c {
+        margin-top: 8%;
+        height: auto;
+        padding-bottom: 4%;
+    }
+
+    .botao-comprar-c button {
+        width: 50%;
+        font-size: 2.4vh;
+    }
+
+    footer .row {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+}
+
+/* Mobile (até 576px) */
+@media (max-width: 576px) {
+    .container-c {
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 5%;
+    }
+
+    .titulo-c h1 {
+        font-size: 4vh;
+    }
+
+    .produto-c {
+        padding: 4%;
+        border-radius: 14px;
+        flex-direction: column;
+    }
+
+    .produto-c h1 {
+        font-size: 18px;
+    }
+
+    .produto-c img {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+    .detalhesp-c {
+        margin-left: 0;
+    }
+
+    /* Linha de preço e quantidade do produto */
+    .produto-c [style*="margin-left: auto"] {
+        margin-left: 0 !important;
+        margin-top: 12px;
+        text-align: left !important;
+    }
+
+    .total-c {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6%;
+        border-radius: 15px;
+        padding: 5% 6%;
+    }
+
+    .texto-total {
+        font-size: 24px;
+    }
+
+    .preco-total {
+        font-size: 24px;
+    }
+
+    .titulo-total-c {
+        align-items: center;
+    }
+
+    .botao-comprar-c {
+        margin-top: 10%;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .botao-comprar-c button {
+        width: 80%;
+        font-size: 2.2vh;
+        padding: 10px 0;
+    }
+
+    footer {
+        margin-top: 60px !important;
+    }
+
+    footer .row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding-left: 20px;
+    }
+
+    footer .col-6 {
+        min-width: unset;
+        width: 45% !important;
+    }
+
+    footer .col-lg-3 {
+        width: 100% !important;
+    }
 }

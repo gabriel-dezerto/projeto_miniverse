@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 1002,
+        "nome": "Homem de Ferro",
+        "marca": "Marvel",
+        "preco": 599.99,
+        "quantidade": 1
+    }
+]
