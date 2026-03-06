@@ -99,7 +99,7 @@
                     <button type="button" class="btn btn-primary"
                         style="margin-left: auto; margin-right: auto; background-color: #1cbe7e; color: black; border: solid black 2px; width: 40%; border-radius: 60px; font-size: 2.5vh;">Entrar</button>
                 </div>
-                <div style="margin-left: auto; margin-right: auto; margin-top: 1%; margin-bottom: 3%;">
+                <div id="criarContaDiv" style="margin-left: auto; margin-right: auto; margin-top: 1%; margin-bottom: 3%;">
                     <p>Não tem uma conta? <a href="/html/criarconta.html"
                             style="text-decoration: none; color: #1cbe7e;"><b>Crie uma</b></a></p>
                 </div>
@@ -514,7 +514,9 @@
             const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 
             // --- Se o usuário já estiver logado ---
+            const criarContaDiv = document.getElementById("criarContaDiv");
             if (usuarioLogado) {
+                criarContaDiv.style.display = "none"; // Esconde o link de criar conta
                 modalTitle.textContent = "Bem-vindo!";
                 modalBody.innerHTML = `
                     <p style="text-align: center; font-size: 2.5vh;">
